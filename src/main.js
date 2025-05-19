@@ -5,6 +5,9 @@ import "element-ui/lib/theme-chalk/index.css";
 
 import ComponentUtil from "./components";
 
+import './assets/css/base.less';
+
+
 Vue.config.productionTip = false;
 
 Vue.use(ElementUI);

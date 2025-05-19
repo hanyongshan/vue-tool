@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ms-button type="info">我是按钮</ms-button>
+   <el-button class="ms-button ms-button-primary-28" type="primary">hahah</el-button>
   </div>
 </template>
 
@@ -12,12 +12,5 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+/* @import url(@/assets/css/base.less); */
 </style>
