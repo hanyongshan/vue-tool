@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-   <el-button class="ms-button ms-button-primary-28" type="primary">hahah</el-button>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -11,6 +11,16 @@ export default {
 };
 </script>
 
-<style>
-/* @import url(@/assets/css/base.less); */
+<style lang="less">
+#app {
+  overflow: auto;
+}
+.tip {
+  font-size: 20px;
+  line-height: 30px;
+  padding: 5px 10px;
+}
+.content {
+  padding: 10px;
+}
 </style>

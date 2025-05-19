@@ -1,14 +1,178 @@
-
 .ms-button {
   font-family: @buttonFontFamily;
   font-weight: @buttonFontWeight;
   line-height: @buttonLineHeight;
   border-radius: @buttonBorderRadius;
   transition: none;
-  & + & {
+
+  &+& {
     margin-left: @buttonMarignLeft;
   }
 }
+
+
+// 主要按钮-28
+.ms-button-primary-28 {
+  height: @buttonPrimary28Height;
+  padding: @buttonPrimary28Padding;
+  font-size: @buttonPrimary28FontSize;
+  color: @buttonPrimary28Color;
+  background: @buttonPrimary28Background;
+  border: @buttonPrimary28Border;
+
+  &:hover {
+    background: @buttonPrimary28HoverBackground;
+  }
+
+  &:active {
+    background: @buttonPrimary28ActiveBackground;
+    box-shadow: @buttonPrimary28ActiveBoxShadow;
+  }
+
+  &.is-disabled {
+    background: @buttonPrimary28DisabledBackground;
+    box-shadow: @buttonPrimary28DisabledBoxShadow;
+  }
+}
+
+// 次要按钮-28
+.ms-button-secondary-28 {
+  height: @buttonSecondary28Height;
+  padding: @buttonSecondary28Padding;
+  font-size: @buttonSecondary28FontSize;
+  color: @buttonSecondary28Color;
+  background: @buttonSecondary28Background;
+  border: @buttonSecondary28Border;
+
+  &:hover {
+    background: @buttonSecondary28HoverBackground;
+    border-color: @buttonSecondary28HoverBorderColor;
+  }
+
+  &:active {
+    background: @buttonSecondary28ActiveBackground;
+    border-color: @buttonSecondary28ActiveBorderColor;
+    box-shadow: @buttonSecondary28ActiveBoxShadow;
+  }
+
+  &.is-disabled {
+    color: @buttonSecondary28DisabledColor;
+    background: @buttonSecondary28DisabledBackground;
+    border-color: @buttonSecondary28DisabledBorderColor;
+    box-shadow: @buttonSecondary28DisabledBoxShadow;
+  }
+}
+
+
+
+// 文字图标按钮-28
+.ms-button-text-icon-28 {
+  height: @buttonTextIcon28Height;
+  padding: @buttonTextIcon28Padding;
+  font-size: @buttonTextIcon28FontSize;
+  color: @buttonTextIcon28Color;
+  background: @buttonTextIcon28Background;
+  border: @buttonTextIcon28Border;
+  border-radius: @buttonTextIcon28BorderRadius;
+  box-shadow: @buttonTextIcon28BoxShadow;
+
+  &:hover {
+    background: @buttonTextIcon28HoverBackground;
+    border-color: @buttonTextIcon28HoverBorderColor;
+    box-shadow: @buttonTextIcon28HoverBoxShadow;
+  }
+
+  &:active {
+    background: @buttonTextIcon28ActiveBackground;
+    border-color: @buttonTextIcon28ActiveBorderColor;
+    box-shadow: @buttonTextIcon28ActiveBoxShadow;
+  }
+
+  &> :first-child {
+    color: @buttonTextIcon28FirstColor;
+  }
+
+  &.is-disabled {
+    color: @buttonTextIcon28DisabledColor;
+    background: @buttonTextIcon28DisabledBackground;
+    border-color: @buttonTextIcon28DisabledBorderColor;
+    box-shadow: @buttonTextIcon28DisabledBoxShadow;
+
+    &> :first-child {
+      opacity: @buttonTextIcon28DisabledFirstOpacity;
+    }
+  }
+}
+
+
+
+// 图标按钮-28
+.ms-button-icon-28,
+.ms-button-icon-20 {
+  height: @buttonIcon28Height;
+  padding: @buttonIcon28Padding;
+  font-size: @buttonIcon28FontSize;
+  background: @buttonIcon28Background;
+  border: @buttonIcon28Border;
+  box-shadow: @buttonIcon28BoxShadow;
+
+  &:hover {
+    background: @buttonIcon28HoverBackground;
+    border-color: @buttonIcon28HoverBorderColor;
+    box-shadow: @buttonIcon28HoverBoxShadow;
+  }
+
+  &:active {
+    background: @buttonIcon28ActiveBackground;
+    border-color: @buttonIcon28ActiveBorderColor;
+    box-shadow: @buttonIcon28ActiveBoxShadow;
+  }
+
+  &> :first-child {
+    color: @buttonIcon28FirstColor;
+  }
+
+  &.is-disabled {
+    background: @buttonIcon28DisabledBackground;
+    border-color: @buttonIcon28DisabledBorderColor;
+    box-shadow: @buttonIcon28DisabledBoxShadow;
+
+    &> :first-child {
+      color: @buttonIcon28DisabledFirstColor;
+    }
+  }
+}
+
+// 图标按钮-20
+.ms-button-icon-20 {
+  height: @buttonIcon20Height;
+  padding: @buttonIcon20Padding;
+  font-size: @buttonIcon20FontSize;
+}
+
+// 图形按钮-20
+.ms-button-sign-20 {
+  height: @buttonSignDelete20Height;
+  padding: @buttonSignDelete20Padding;
+  font-size: @buttonSignDelete20FontSize;
+  line-height: @buttonSignDelete20LineHeight;
+  background: @buttonSignDelete20Background;
+  border: @buttonSignDelete20Border;
+
+  &> :first-child {
+    color: @buttonSignDelete20FirstColor;
+  }
+
+  &:hover> :first-child,
+  &:active> :first-child {
+    color: @buttonSignDelete20HoverActiveFirstColor;
+  }
+
+  &.is-disabled> :first-child {
+    color: @buttonSignDelete20DisabledFirstColor;
+  }
+}
+
 
 // 操作按钮-32
 .ms-button-operation-32 {
@@ -18,30 +182,36 @@
   color: @buttonOperation32Color;
   background: @buttonOperation32Background;
   border: @buttonOperation32Border;
+
   &:hover {
     background: @buttonOperation32HoverBackground;
     border-color: @buttonOperation32HoverBorderColor;
   }
+
   &:active {
     background: @buttonOperation32ActiveBackground;
     border-color: @buttonOperation32ActiveBorderColor;
     box-shadow: @buttonOperation32ActiveBoxShadow;
   }
+
   span {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .ms-button-icon {
     width: @buttonOperation32IconWidth;
     height: @buttonOperation32IconHeight;
     margin-right: @buttonOperation32IconMarginRight;
   }
+
   &.is-disabled {
     color: @buttonOperation32DisabledColor;
     background: @buttonOperation32DisabledBackground;
     border-color: @buttonOperation32DisabledBorderColor;
     box-shadow: @buttonOperation32DisabledBoxShadow;
+
     .ms-button-icon {
       opacity: @buttonOperation32DisabledIconOpacity;
     }
@@ -58,28 +228,33 @@
   border: @buttonUpdownBorder;
   border-radius: @buttonUpdownBorderRadius;
   opacity: @buttonUpdownOpacity;
+
   &:hover {
     background: @buttonUpdownHoverBackground;
     border-color: @buttonUpdownHoverBorderColor;
     box-shadow: @buttonUpdownHoverBoxShadow;
   }
+
   &:active {
     background: @buttonUpdownActiveBackground;
     border-color: @buttonUpdownActiveBorderColor;
     box-shadow: @buttonUpdownActiveBoxShadow;
     opacity: @buttonUpdownActiveOpacity;
   }
+
   span {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .ms-button-icon {
     width: @buttonUpdownIconWidth;
     height: @buttonUpdownIconHeight;
     margin-top: @buttonUpdownIconMarginTop;
     margin-bottom: @buttonUpdownIconMarginBottom;
   }
+
   &.is-disabled {
     background: @buttonUpdownDisabledBackground;
     border-color: @buttonUpdownDisabledBorderColor;
@@ -91,11 +266,13 @@
 // 操作分段按钮-32
 .ms-button-operation-split-32 {
   border-radius: @buttonOperationSplit32BorderRadius;
-  & + &,
-  .ms-button + &,
-  & + .ms-button {
+
+  &+&,
+  .ms-button+&,
+  &+.ms-button {
     margin-left: @buttonOperationSplit32MarginLeft;
   }
+
   .el-button--primary {
     height: @buttonOperationSplit32Height;
     padding: @buttonOperationSplit32Padding;
@@ -108,68 +285,85 @@
     border: @buttonOperationSplit32Border;
     box-shadow: @buttonOperationSplit32BoxShadow;
     transition: none;
+
     &:first-child {
       &:hover {
         background: @buttonOperationSplit32FirstChildHoverBackground;
         box-shadow: @buttonOperationSplit32FirstChildHoverBoxShadow;
       }
+
       &:active {
         background: @buttonOperationSplit32FirstChildActiveBackground;
         border-color: @buttonOperationSplit32FirstChildActiveBorderColor;
         box-shadow: @buttonOperationSplit32FirstChildActiveBoxShadow;
       }
+
       span {
         display: flex;
         align-items: center;
       }
+
+
+
       .ms-button-icon {
         width: @buttonOperationSplit32FirstChildIconWidth;
         height: @buttonOperationSplit32FirstChildIconHeight;
         margin-right: @buttonOperationSplit32FirstChildIconMarginRight;
       }
+
       &.is-disabled {
         color: @buttonOperationSplit32FirstChildDisabledColor;
         background: @buttonOperationSplit32FirstChildDisabledBackground;
         border-color: @buttonOperationSplit32FirstChildDisabledBorderColor;
         box-shadow: @buttonOperationSplit32FirstChildDisabledBoxShadow;
+
         .ms-button-icon {
           opacity: @buttonOperationSplit32FirstChildDisabledIconOpacity;
         }
       }
     }
+
     &:last-child {
       float: right;
       padding: @buttonOperationSplit32LastChildPadding;
+
       &::before {
         width: @buttonOperationSplit32LastChildBeforeWidth;
       }
+
       &:hover {
         background: @buttonOperationSplit32LastChildHoverBackground;
         box-shadow: @buttonOperationSplit32LastChildHoverBoxShadow;
       }
+
       &:active {
         background: @buttonOperationSplit32LastChildActiveBackground;
         border-color: @buttonOperationSplit32LastChildActiveBorderColor;
         box-shadow: @buttonOperationSplit32LastChildActiveBoxShadow;
       }
+
       .el-icon-arrow-down {
         margin: @buttonOperationSplit32LastChildIconArrowDownMargin;
         font-size: @buttonOperationSplit32LastChildIconArrowDownFontSize;
         color: @buttonOperationSplit32LastChildIconArrowDownColor;
+
         &::before {
           content: '';
         }
       }
+
       &.is-disabled {
         background: @buttonOperationSplit32LastChildDisabledBackground;
         border-color: @buttonOperationSplit32LastChildDisabledBorderColor;
         box-shadow: @buttonOperationSplit32LastChildDisabledBoxShadow;
+
         .el-icon-arrow-down {
           color: @buttonOperationSplit32LastChildDisabledIconArrowDownColor;
         }
       }
     }
   }
+
   &:hover {
     .el-button--primary:not(active) {
       border-color: @buttonOperationSplit32HoverPrimaryNotActiveBorderColor;
@@ -183,18 +377,24 @@
   border: @buttonOperationSplitDropdown32Border;
   border-radius: @buttonOperationSplitDropdown32BorderRadius;
   box-shadow: @buttonOperationSplitDropdown32BoxShadow;
+
   &[x-placement^='bottom'] {
     margin-top: @buttonOperationSplitDropdown32BottomMarginTop;
     margin-bottom: @buttonOperationSplitDropdown32BottomMarginBottom;
   }
+
   &[x-placement^='top'] {
     margin-top: @buttonOperationSplitDropdown32TopMarginTop;
     margin-bottom: @buttonOperationSplitDropdown32TopMarginBottom;
   }
+
+
+
   .popper__arrow,
   .popper__arrow::after {
     border-width: @buttonOperationSplitDropdown32PopperArrowBorderWidth;
   }
+
   .el-dropdown-menu__item {
     padding: @buttonOperationSplitDropdown32ItemPadding;
     font-family: @buttonOperationSplitDropdown32ItemFontFamily;
@@ -204,278 +404,43 @@
     color: @buttonOperationSplitDropdown32ItemColor;
     background: @buttonOperationSplitDropdown32ItemBackground;
     box-shadow: @buttonOperationSplitDropdown32ItemBoxShadow;
+
     &:not(.is-disabled:hover) {
       background: @buttonOperationSplitDropdown32ItemNotDisabledHoverBackground;
       box-shadow: @buttonOperationSplitDropdown32ItemNotDisabledHoverBoxShadow;
     }
+
     &:not(.is-disabled:active) {
       background: @buttonOperationSplitDropdown32ItemNotDisabledActiveBackground;
       box-shadow: @buttonOperationSplitDropdown32ItemNotDisabledActiveBoxShadow;
     }
+
     span {
       display: flex;
       align-items: center;
     }
+
     .ms-button-icon {
       width: @buttonOperationSplitDropdown32ItemIconWidth;
       height: @buttonOperationSplitDropdown32ItemIconHeight;
       margin-right: @buttonOperationSplitDropdown32ItemIconMarginRight;
     }
+
     &:first-of-type {
       border-radius: @buttonOperationSplitDropdown32ItemFirstBorderRadius;
     }
+
     &:last-of-type {
       border-radius: @buttonOperationSplitDropdown32ItemLastBorderRadius;
     }
   }
+
   .el-dropdown-menu__item--divided {
     margin-top: @buttonOperationSplitDropdown32ItemDividedMarginTop;
     border-color: @buttonOperationSplitDropdown32ItemDividedBorderColor;
+
     &::before {
       height: @buttonOperationSplitDropdown32ItemDividedBeforeHeight;
     }
-  }
-}
-
-// 主要按钮-28
-.ms-button-primary-28 {
-  height: @buttonPrimary28Height;
-  padding: @buttonPrimary28Padding;
-  font-size: @buttonPrimary28FontSize;
-  color: @buttonPrimary28Color;
-  background: @buttonPrimary28Background;
-  border: @buttonPrimary28Border;
-  &:hover {
-    background: @buttonPrimary28HoverBackground;
-  }
-  &:active {
-    background: @buttonPrimary28ActiveBackground;
-    box-shadow: @buttonPrimary28ActiveBoxShadow;
-  }
-  &.is-disabled {
-    background: @buttonPrimary28DisabledBackground;
-    box-shadow: @buttonPrimary28DisabledBoxShadow;
-  }
-}
-
-// 次要按钮-28
-.ms-button-secondary-28 {
-  height: @buttonSecondary28Height;
-  padding: @buttonSecondary28Padding;
-  font-size: @buttonSecondary28FontSize;
-  color: @buttonSecondary28Color;
-  background: @buttonSecondary28Background;
-  border: @buttonSecondary28Border;
-  &:hover {
-    background: @buttonSecondary28HoverBackground;
-    border-color: @buttonSecondary28HoverBorderColor;
-  }
-  &:active {
-    background: @buttonSecondary28ActiveBackground;
-    border-color: @buttonSecondary28ActiveBorderColor;
-    box-shadow: @buttonSecondary28ActiveBoxShadow;
-  }
-  &.is-disabled {
-    color: @buttonSecondary28DisabledColor;
-    background: @buttonSecondary28DisabledBackground;
-    border-color: @buttonSecondary28DisabledBorderColor;
-    box-shadow: @buttonSecondary28DisabledBoxShadow;
-  }
-}
-
-// 文字图标按钮-28
-.ms-button-text-icon-28 {
-  height: @buttonTextIcon28Height;
-  padding: @buttonTextIcon28Padding;
-  font-size: @buttonTextIcon28FontSize;
-  color: @buttonTextIcon28Color;
-  background: @buttonTextIcon28Background;
-  border: @buttonTextIcon28Border;
-  border-radius: @buttonTextIcon28BorderRadius;
-  box-shadow: @buttonTextIcon28BoxShadow;
-  &:hover {
-    background: @buttonTextIcon28HoverBackground;
-    border-color: @buttonTextIcon28HoverBorderColor;
-    box-shadow: @buttonTextIcon28HoverBoxShadow;
-  }
-  &:active {
-    background: @buttonTextIcon28ActiveBackground;
-    border-color: @buttonTextIcon28ActiveBorderColor;
-    box-shadow: @buttonTextIcon28ActiveBoxShadow;
-  }
-  & > :first-child {
-    color: @buttonTextIcon28FirstColor;
-  }
-  &.is-disabled {
-    color: @buttonTextIcon28DisabledColor;
-    background: @buttonTextIcon28DisabledBackground;
-    border-color: @buttonTextIcon28DisabledBorderColor;
-    box-shadow: @buttonTextIcon28DisabledBoxShadow;
-    & > :first-child {
-      opacity: @buttonTextIcon28DisabledFirstOpacity;
-    }
-  }
-}
-
-// 图标按钮-28
-.ms-button-icon-28,
-.ms-button-icon-20 {
-  height: @buttonIcon28Height;
-  padding: @buttonIcon28Padding;
-  font-size: @buttonIcon28FontSize;
-  background: @buttonIcon28Background;
-  border: @buttonIcon28Border;
-  box-shadow: @buttonIcon28BoxShadow;
-  &:hover {
-    background: @buttonIcon28HoverBackground;
-    border-color: @buttonIcon28HoverBorderColor;
-    box-shadow: @buttonIcon28HoverBoxShadow;
-  }
-  &:active {
-    background: @buttonIcon28ActiveBackground;
-    border-color: @buttonIcon28ActiveBorderColor;
-    box-shadow: @buttonIcon28ActiveBoxShadow;
-  }
-  & > :first-child {
-    color: @buttonIcon28FirstColor;
-  }
-  &.is-disabled {
-    background: @buttonIcon28DisabledBackground;
-    border-color: @buttonIcon28DisabledBorderColor;
-    box-shadow: @buttonIcon28DisabledBoxShadow;
-    & > :first-child {
-      color: @buttonIcon28DisabledFirstColor;
-    }
-  }
-}
-
-// 图标按钮-20
-.ms-button-icon-20 {
-  height: @buttonIcon20Height;
-  padding: @buttonIcon20Padding;
-  font-size: @buttonIcon20FontSize;
-}
-
-// 大图标按钮-28
-.ms-button-big-icon-28 {
-  height: @buttonBigIcon28Height;
-  padding: @buttonBigIcon28Padding;
-  font-size: @buttonBigIcon28FontSize;
-  background: @buttonBigIcon28Background;
-  border: @buttonBigIcon28Border;
-  box-shadow: @buttonBigIcon28BoxShadow;
-  &:hover {
-    background: @buttonBigIcon28HoverBackground;
-    box-shadow: @buttonBigIcon28HoverBoxShadow;
-  }
-  &:active {
-    background: @buttonBigIcon28ActiveBackground;
-    box-shadow: @buttonBigIcon28ActiveBoxShadow;
-  }
-  & > :first-child {
-    color: @buttonBigIcon28FirstColor;
-  }
-  &.is-disabled {
-    background: @buttonBigIcon28DisabledBackground;
-    box-shadow: @buttonBigIcon28DisabledBoxShadow;
-    & > :first-child {
-      color: @buttonBigIcon28DisabledFirstColor;
-    }
-  }
-}
-
-// 大图标按钮-28-组合
-.el-button-group {
-  .ms-button-big-icon-28:first-child {
-    border-radius: @buttonGroupBigIcon28FirstBorderRadius;
-  }
-  .ms-button-big-icon-28:not(:first-child, :last-child ){
-    border-radius: @buttonGroupBigIcon28NotFirstLastBorderRadius;
-  }
-  .ms-button-big-icon-28:last-child {
-    border-radius: @buttonGroupBigIcon28LastBorderRadius;
-  }
-  .ms-button-big-icon-28 + .ms-button-big-icon-28 {
-    margin-left: @buttonGroupBigIcon28MarginLeft;
-  }
-}
-
-// 图形按钮-20-删除
-.ms-button-sign-delete-20 {
-  height: @buttonSignDelete20Height;
-  padding: @buttonSignDelete20Padding;
-  font-size: @buttonSignDelete20FontSize;
-  line-height: @buttonSignDelete20LineHeight;
-  background: @buttonSignDelete20Background;
-  border: @buttonSignDelete20Border;
-  & > :first-child {
-    color: @buttonSignDelete20FirstColor;
-  }
-  &:hover > :first-child,
-  &:active > :first-child {
-    color: @buttonSignDelete20HoverActiveFirstColor;
-  }
-  &.is-disabled > :first-child {
-    color: @buttonSignDelete20DisabledFirstColor;
-  }
-}
-
-// 图形按钮-20-加
-.ms-button-sign-plus-20 {
-  height: @buttonSignPlus20Height;
-  padding: @buttonSignPlus20Padding;
-  font-size: @buttonSignPlus20FontSize;
-  line-height: @buttonSignPlus20LineHeight;
-  background: @buttonSignPlus20Background;
-  border: @buttonSignPlus20Border;
-  & > :first-child {
-    color: @buttonSignPlus20FirstColor;
-  }
-  &:hover > :first-child,
-  &:active > :first-child {
-    color: @buttonSignPlus20HoverActiveFirstColor;
-  }
-  &.is-disabled > :first-child {
-    color: @buttonSignPlus20DisabledFirstColor;
-  }
-}
-
-// 图形按钮-20-减
-.ms-button-sign-remove-20 {
-  height: @buttonSignRemove20Height;
-  padding: @buttonSignRemove20Padding;
-  font-size: @buttonSignRemove20FontSize;
-  line-height: @buttonSignRemove20LineHeight;
-  background: @buttonSignRemove20Background;
-  border: @buttonSignRemove20Border;
-  & > :first-child {
-    color: @buttonSignRemove20FirstColor;
-  }
-  &:hover > :first-child,
-  &:active > :first-child {
-    color: @buttonSignRemove20HoverActiveFirstColor;
-  }
-  &.is-disabled > :first-child {
-    color: @buttonSignRemove20DisabledFirstColor;
-  }
-}
-
-// 图形按钮-20-方向
-.ms-button-sign-direction-20 {
-  height: @buttonSignDirection20Height;
-  padding: @buttonSignDirection20Padding;
-  font-size: @buttonSignDirection20FontSize;
-  line-height: @buttonSignDirection20LineHeight;
-  background: @buttonSignDirection20Background;
-  border: @buttonSignDirection20Border;
-  & > :first-child {
-    color: @buttonSignDirection20FirstColor;
-  }
-  &:hover > :first-child,
-  &:active > :first-child {
-    color: @buttonSignDirection20HoverActiveFirstColor;
-  }
-  &.is-disabled > :first-child {
-    color: @buttonSignDirection20DisabledFirstColor;
   }
 }

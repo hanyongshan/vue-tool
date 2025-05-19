@@ -1,0 +1,32 @@
+import Vue from "vue";
+import VueRouter from "vue-router";
+
+// 1. 注册 VueRouter 插件
+Vue.use(VueRouter);
+
+// 2. 定义路由组件（可以懒加载）
+const HomeIndex = () => import("@/views/Home.vue");
+const ButtonIndex = () => import("@/views/assembly/Button.vue");
+
+// 3. 定义路由规则
+const routes = [
+  {
+    path: "/",
+    name: "HomeIndex",
+    component: HomeIndex,
+  },
+  {
+    path: "/button",
+    name: "HomeIndex",
+    component: ButtonIndex,
+  },
+];
+
+// 4. 创建路由实例
+const router = new VueRouter({
+  mode: "history", // 可选: 'hash'（默认）或 'history'（需服务器支持）
+  base: process.env.BASE_URL,
+  routes,
+});
+
+export default router;
