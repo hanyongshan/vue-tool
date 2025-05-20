@@ -1,11 +1,19 @@
-<!--  -->
+
 <template>
   <div class='data-picker'>
+      <div class="tip">简单选择日期组件</div>
+          <div class="content">
       <el-date-picker ref="datePicker" class="ms-date-picker" popper-class="ms-date-picker-popper" v-model="value" format="yyyy-MM-dd" value-format="yyyy-MM-dd" type="date" placement="bottom-start" placeholder="选择日期" clearable></el-date-picker>
+  </div>
+
+  
   </div>
 </template>
 
 <script>
+
+
+
 export default {
   // import引入的组件需要注入到对象中才能使用
   name: "DatePicker",
