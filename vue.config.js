@@ -15,7 +15,7 @@ module.exports = defineConfig({
    filenameHashing: true,
     // 开发环境配置
     devServer: {
-      open: true,
+      open: false,
       host: '0.0.0.0',
       port: 9070,
       https: false

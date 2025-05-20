@@ -4,7 +4,7 @@ import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import Router from "./router/Index";
 
-import ComponentUtil from "../package/components";
+import ComponentUtil from "../package/index.js";
 
 import "../package/assets/css/base.less";
 

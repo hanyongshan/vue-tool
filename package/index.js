@@ -1,5 +1,5 @@
 const componentsObj = {};
-const files = require.context("../components", true, /\.vue$/);
+const files = require.context("./components", true, /\.vue$/);
 
 //files.keys() === ['./button/MsButton.vue',...]
 //files(file)---获取指定路径下的模块Module

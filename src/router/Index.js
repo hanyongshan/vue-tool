@@ -7,6 +7,7 @@ Vue.use(VueRouter);
 // 2. 定义路由组件（可以懒加载）
 const HomeIndex = () => import("@/views/Home.vue");
 const ButtonIndex = () => import("@/views/assembly/Button.vue");
+const DatePick = () => import("@/views/assembly/DatePick.vue");
 
 // 3. 定义路由规则
 const routes = [
@@ -19,6 +20,11 @@ const routes = [
     path: "/button",
     name: "HomeIndex",
     component: ButtonIndex,
+  },
+  {
+    path: "/datepick",
+    name: "DatePick",
+    component: DatePick,
   },
 ];
 

@@ -1,7 +1,7 @@
 <template>
   <div class='home'>
     <div @click="go('/button')">我是按钮</div>
-    <div>按钮</div>
+    <div @click="go('/datepick')">日期</div>
     <div>按钮</div>
     <div>按钮</div>
   </div>
