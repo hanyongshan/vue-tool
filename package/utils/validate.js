@@ -1,20 +1,6 @@
 import Dayjs from 'dayjs'
 
 /**
- * 判断是否显示按钮
- * */
-const checkbtns = btnCode => {
-  const store = window.vm.$store
-  const ifBtns = store.state.ifBtns
-  if (!ifBtns) return false
-  const btns = store.state.btns
-  for (let i = 0, length = btns.length; i < length; i++) {
-    if (btns[i].btnCode === btnCode) return btns[i].ifAuth
-  }
-  return true
-}
-
-/**
  * 尽量使用下面的$msValidate.number方法
  * 输入框input强制只能输入非负整数
  * @input="$msValidate.nonnegativeInteger($data, 'input')"
@@ -355,5 +341,18 @@ const password = (rule, value, callback) => {
   return callback()
 }
 
-export default { checkbtns, nonnegativeInteger, positiveInteger, nonnegativeDouble, number, capitalizationNumbers, noOverToday, noSmallDate, noSmallDateNoOverToday, noBigDate, noBigDateNoOverToday, message, creditCode, idcCode, landline, mobilePhone, mbPeLdline, email, zipCode, password }
+
+/**
+ * 社会信用代码校验-计算key
+ * */
+const creditCodeCalcKey = (code, array, keys, dividend) => {
+  let count = 0
+  for (let i = 0, length = keys.length; i < length; i++) {
+    count += keys[i] * array.indexOf(code[i])
+  }
+  const remainder = count % dividend
+  return remainder === 0 ? 0 : dividend - remainder
+}
+
+export default {  nonnegativeInteger, positiveInteger, nonnegativeDouble, number, capitalizationNumbers, noOverToday, noSmallDate, noSmallDateNoOverToday, noBigDate, noBigDateNoOverToday, message, creditCode, idcCode, landline, mobilePhone, mbPeLdline, email, zipCode, password }
 
