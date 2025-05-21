@@ -1,0 +1,302 @@
+@font-face {
+  font-family: 'iconfont'; /* Project id 3042046 */
+  src:
+    url('iconfont.woff2?t=1747835207071') format('woff2'),
+    url('iconfont.woff?t=1747835207071') format('woff'),
+    url('iconfont.ttf?t=1747835207071') format('truetype');
+}
+
+/* 引入字体图标后，可以将下面类名选择器变换为属性选择器，判断类名中是否包含icon_，包含则都默认使用该属性选择器下的内容 */
+
+/* .iconfont { */
+[class*='icon_'] {
+  font-family: 'iconfont' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_full-screen:before {
+  content: '\e735';
+}
+
+.icon_exit-full-screen:before {
+  content: '\e736';
+}
+
+.icon_3zuidahua-1:before {
+  content: '\e65d';
+}
+
+.icon_shezhi:before {
+  content: '\e8b8';
+}
+
+.icon_zuixiaohua:before {
+  content: '\e650';
+}
+
+.icon_op-Check-L:before {
+  content: '\e614';
+}
+
+.icon_op-download-F:before {
+  content: '\e613';
+}
+
+.icon_op-point-F:before {
+  content: '\e610';
+}
+
+.icon_op-eraser-F:before {
+  content: '\e609';
+}
+
+.icon_op-Import-F:before {
+  content: '\e608';
+}
+
+.icon_td-disable-F:before {
+  content: '\e607';
+}
+
+.icon_a-op-Fullscreen-L:before {
+  content: '\e606';
+}
+
+.icon_op-narrow-L:before {
+  content: '\e605';
+}
+
+.icon_op-amplification-L:before {
+  content: '\e604';
+}
+
+.icon_a-bd-gumcap-L:before {
+  content: '\e603';
+}
+
+.icon_td-msgsuccess-F:before {
+  content: '\e648';
+}
+
+.icon_td-msgnor-F:before {
+  content: '\e649';
+}
+
+.icon_td-msgerror-F:before {
+  content: '\e646';
+}
+
+.icon_td-msgwarn-F:before {
+  content: '\e647';
+}
+
+.icon_td-Infotip-F:before {
+  content: '\e644';
+}
+
+.icon_td-Reconfirm-F:before {
+  content: '\e645';
+}
+
+.icon_op-FillUp-F:before {
+  content: '\e641';
+}
+
+.icon_op-FillLeft-F:before {
+  content: '\e643';
+}
+
+.icon_op-AddLine-F:before {
+  content: '\e640';
+}
+
+.icon_op-SubtractLine-F:before {
+  content: '\e642';
+}
+
+.icon_op-Deireadh-F:before {
+  content: '\e63f';
+}
+
+.icon_op-Exit-F:before {
+  content: '\e63e';
+}
+
+.icon_op-Remind-L:before {
+  content: '\e63d';
+}
+
+.icon_op-SubtractLine-L:before {
+  content: '\e63b';
+}
+
+.icon_op-AddLine-L:before {
+  content: '\e63c';
+}
+
+.icon_td-Added-F:before {
+  content: '\e63a';
+}
+
+.icon_td-Place-F:before {
+  content: '\e639';
+}
+
+.icon_td-Card-F:before {
+  content: '\e638';
+}
+
+.icon_td-Man-L:before {
+  content: '\e636';
+}
+
+.icon_td-Woman-L:before {
+  content: '\e637';
+}
+
+.icon_op-Sort-F:before {
+  content: '\e635';
+}
+
+.icon_op-Search-F:before {
+  content: '\e62f';
+}
+
+.icon_op-Empty-F:before {
+  content: '\e630';
+}
+
+.icon_op-Export-F:before {
+  content: '\e631';
+}
+
+.icon_op-Edit-F:before {
+  content: '\e632';
+}
+
+.icon_op-Upload-F:before {
+  content: '\e633';
+}
+
+.icon_op-Replace-F:before {
+  content: '\e634';
+}
+
+.icon_op-Column-F:before {
+  content: '\e62d';
+}
+
+.icon_op-Add-F:before {
+  content: '\e62e';
+}
+
+.icon_op-Dangerous-F:before {
+  content: '\e62c';
+}
+
+.icon_op-Message-F:before {
+  content: '\e62b';
+}
+
+.icon_op-FillUp-L:before {
+  content: '\e629';
+}
+
+.icon_op-FillLeft-L:before {
+  content: '\e62a';
+}
+
+.icon_op-Delete-L:before {
+  content: '\e628';
+}
+
+.icon_op-Print-L:before {
+  content: '\e627';
+}
+
+.icon_op-Scan-L:before {
+  content: '\e626';
+}
+
+.icon_op-Serach-L:before {
+  content: '\e623';
+}
+
+.icon_op-Card-L:before {
+  content: '\e624';
+}
+
+.icon_op-Package-L:before {
+  content: '\e625';
+}
+
+.icon_fr-DoubleDown-L:before {
+  content: '\e622';
+}
+
+.icon_fr-DoubleLeft-L:before {
+  content: '\e61d';
+}
+
+.icon_fr-DoubleRight-L:before {
+  content: '\e61e';
+}
+
+.icon_fr-DoubleUp-L:before {
+  content: '\e61f';
+}
+
+.icon_fr-Left-L:before {
+  content: '\e620';
+}
+
+.icon_fr-Right-L:before {
+  content: '\e621';
+}
+
+.icon_fr-Move-L:before {
+  content: '\e61c';
+}
+
+.icon_fr-Clean-L:before {
+  content: '\e61a';
+}
+
+.icon_fr-ClosePop-L:before {
+  content: '\e618';
+}
+
+.icon_fr-MinPop-L:before {
+  content: '\e615';
+}
+
+.icon_fr-MaxPop-L:before {
+  content: '\e619';
+}
+
+.icon_minimize:before {
+  content: '\e60a';
+}
+
+.icon_maximize:before {
+  content: '\e60b';
+}
+
+.icon_setup:before {
+  content: '\e60c';
+}
+
+.icon_close:before {
+  content: '\e60d';
+}
+
+.icon_dropdown:before {
+  content: '\e60e';
+}
+
+.icon_reduction:before {
+  content: '\e60f';
+}
