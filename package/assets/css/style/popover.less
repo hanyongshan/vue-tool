@@ -1,0 +1,72 @@
+// 弹出框
+.ms-popover {
+  min-width: @popoverMinWidth;
+  padding: @popoverPadding;
+  user-select: none !important;
+  background: @popoverBackground;
+  border: @popoverBorder;
+  border-radius: @popoverBorderRadius;
+  box-shadow: @popoverBoxShadow;
+  &[x-placement^='bottom'] {
+    margin-top: @popoverBottomMarginTop;
+    margin-bottom: @popoverBottomMarginBottom;
+  }
+  &[x-placement^='top'] {
+    margin-top: @popoverTopMarginTop;
+    margin-bottom: @popoverTopMarginBottom;
+  }
+  .popper__arrow,
+  .popper__arrow::after {
+    border-width: @popoverArrowAfterBorderWidth;
+  }
+}
+
+// 弹出框-下拉
+.ms-popover-select {
+  .ms-input {
+    .el-input__inner {
+      cursor: pointer !important;
+    }
+    .el-input__suffix {
+      cursor: pointer !important;
+      .el-icon-arrow-up {
+        line-height: @popoverSelectInputSuffixIconArrowUpLineHeight;
+        transition:
+          transform 0.3s,
+          -webkit-transform 0.3s !important;
+        transform: rotateZ(180deg);
+        &.is-reverse {
+          transform: rotateZ(0);
+        }
+        &::before {
+          font-size: @popoverSelectInputSuffixIconArrowUpBeforeFontSize;
+          color: @popoverSelectInputSuffixIconArrowUpBeforeColor;
+          content: '' !important;
+        }
+      }
+    }
+    &:hover {
+      .el-input__suffix {
+        .el-icon-arrow-up {
+          &.is-clearable {
+            line-height: @popoverSelectInputHoverSuffixIconArrowUpClearableLineHeight;
+            transition: none !important;
+            &::before {
+              font-size: @popoverSelectInputHoverSuffixIconArrowUpClearableBeforeFontSize;
+              color: @popoverSelectInputHoverSuffixIconArrowUpClearableBeforeColor;
+              content: '' !important;
+            }
+          }
+        }
+      }
+    }
+    &.is-disabled {
+      .el-input__inner {
+        cursor: not-allowed !important;
+      }
+      .el-input__suffix {
+        cursor: not-allowed !important;
+      }
+    }
+  }
+}

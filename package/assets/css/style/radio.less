@@ -1,0 +1,166 @@
+.el-radio-group {
+  font-size: unset;
+}
+.el-radio:focus:not(.is-focus, :active, .is-disabled) .el-radio__inner,
+.el-radio-button:focus:not(.is-focus, :active, .is-disabled),
+.el-radio-button:focus:not(.is-focus, :active, .is-disabled) .el-radio-button__inner {
+  box-shadow: none;
+}
+
+// 单选框
+.ms-radio {
+  height: @radioHeight !important;
+  margin-right: @radioMarginRight;
+  font-family: @radioFontFamily;
+  font-weight: @radioFontWeight;
+  line-height: @radioLineHeight;
+  user-select: none;
+  .el-radio__label {
+    padding-left: @radioLabelPaddingLeft;
+    font-size: @radioLabelFontSize;
+    color: @radioLabelColor;
+  }
+  .el-radio__input {
+    & > .el-radio__inner {
+      width: @radioInputInnerWidth;
+      height: @radioInputInnerHeight;
+      background: @radioInputInnerBackground;
+      border: @radioInputInnerBorder;
+      border-radius: @radioInputInnerBorderRadius;
+    }
+    &.is-checked {
+      .el-radio__inner::after {
+        width: @radioInputCheckedInnerAfterWidth;
+        height: @radioInputCheckedInnerAfterHeight;
+      }
+    }
+    &.is-checked:not(.is-disabled) {
+      .el-radio__inner {
+        background: @radioInputCheckedNotDisabledInnerBackground;
+        box-shadow: @radioInputCheckedNotDisabledInnerBoxShadow;
+      }
+    }
+    &.is-disabled.el-radio__input {
+      cursor: not-allowed;
+    }
+    &.is-disabled.is-checked {
+      .el-radio__inner {
+        background: @radioInputDisabledCheckedInnerBackground;
+        border: @radioInputDisabledCheckedInnerBorder;
+      }
+      .el-radio__inner::after {
+        background: @radioInputDisabledCheckedInnerAfterBackground;
+      }
+    }
+    &.is-disabled:not(.is-checked) {
+      .el-radio__inner {
+        background: @radioInputDisabledNotCheckedInnerBackground;
+        border: @radioInputDisabledNotCheckedInnerBorder;
+      }
+    }
+  }
+  & + & {
+    margin-left: @radioInputMarginLeft;
+  }
+  &.is-disabled {
+    cursor: not-allowed;
+  }
+}
+
+// 单选框-按钮
+.ms-radio-group {
+  height: @radioGroupHeight;
+  line-height: @radioGroupLineHeight;
+  .ms-radio.is-bordered {
+    padding: @radioGroupBorderedPadding;
+    margin-left: @radioGroupBorderedMarginLeft;
+    line-height: @radioGroupBorderedLineHeight;
+    border-color: @radioGroupBorderedBorderColor;
+    border-right-width: @radioGroupBorderedBorderRightWidth;
+    border-radius: @radioGroupBorderedBorderRadius;
+    margin-left: 0 !important;
+    &:first-child {
+      border-radius: @radioGroupBorderedFirstBorderRadius;
+    }
+    &:last-child {
+      border-right-width: @radioGroupBorderedLastBorderRightWidth;
+      border-radius: @radioGroupBorderedLastBorderRadius;
+    }
+  }
+}
+
+// 单选框-切换
+.ms-radio-group-switch {
+  height: @radioGroupSwitchHeight;
+  padding: @radioGroupSwitchPadding;
+  user-select: none;
+  background: @radioGroupSwitchBackground;
+  border: @radioGroupSwitchBorder;
+  border-radius: @radioGroupSwitchBorderRadius;
+  .ms-radio-switch {
+    height: @radioGroupSwitchRadioHeight;
+    border-radius: @radioGroupSwitchRadioBorderRadius;
+    & > .el-radio-button__inner {
+      display: flex;
+      align-items: center;
+      height: @radioGroupSwitchRadioButtonInnerHeight;
+      padding: @radioGroupSwitchRadioButtonInnerPadding;
+      font-family: @radioGroupSwitchRadioButtonInnerFontFamily;
+      font-size: @radioGroupSwitchRadioButtonInnerFontSize;
+      font-weight: @radioGroupSwitchRadioButtonInnerFontWeight;
+      line-height: @radioGroupSwitchRadioButtonInnerLineHeight;
+      color: @radioGroupSwitchRadioButtonInnerColor;
+      background: @radioGroupSwitchRadioButtonInnerBackground;
+      border: @radioGroupSwitchRadioButtonInnerBorder;
+      transition: none;
+    }
+    &.is-active {
+      .el-radio-button__inner {
+        font-family: @radioGroupSwitchRadioActiveInnerFontFamily;
+        font-weight: @radioGroupSwitchRadioActiveInnerFontWeight;
+        color: @radioGroupSwitchRadioActiveInnerColor;
+        background: @radioGroupSwitchRadioActiveInnerBackground;
+        border: @radioGroupSwitchRadioActiveInnerBorder;
+        border-radius: @radioGroupSwitchRadioActiveInnerBorderRadius;
+        box-shadow: @radioGroupSwitchRadioActiveInnerBoxShadow;
+      }
+    }
+  }
+  .ms-radio-switch + .ms-radio-switch {
+    margin-left: @radioGroupSwitchRadioMarginLeft;
+  }
+}
+
+// 单选框-按钮-组
+.ms-radio-button-group {
+  height: @radioButtonGroupHeight;
+  overflow: hidden;
+  line-height: @radioButtonGroupLineHeight;
+  border: @radioButtonGroupBorder;
+  border-radius: @radioButtonGroupBorderRadius;
+  box-shadow: @radioButtonGroupBoxShadow;
+  .el-radio-button {
+    overflow: hidden;
+    line-height: @radioButtonGroupButtonLineHeight;
+    .el-radio-button__inner {
+      height: @radioButtonGroupButtonInnerHeight;
+      padding: @radioButtonGroupButtonInnerPadding;
+      font-family: @radioButtonGroupButtonInnerFontFamily;
+      font-size: @radioButtonGroupButtonInnerFontSize;
+      font-weight: @radioButtonGroupButtonInnerFontWeight;
+      line-height: @radioButtonGroupButtonInnerLineHeight;
+      color: @radioButtonGroupButtonInnerColor;
+      background: @radioButtonGroupButtonInnerBackground;
+      border: @radioButtonGroupButtonInnerBorder;
+      border-radius: @radioButtonGroupButtonInnerBorderRadius;
+    }
+    .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+      color: @radioButtonGroupButtonCheckedInnerColor;
+      background: @radioButtonGroupButtonCheckedInnerBackground;
+    }
+    .el-radio-button__orig-radio:disabled:checked + .el-radio-button__inner {
+      color: @radioButtonGroupButtonDisabledCheckedInnerColor;
+      background: @radioButtonGroupButtonDisabledCheckedInnerBackground;
+    }
+  }
+}

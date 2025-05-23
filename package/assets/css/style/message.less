@@ -1,0 +1,71 @@
+// 消息提示
+.ms-message-success,
+.ms-message-warning,
+.ms-message-info,
+.ms-message-error {
+  min-width: @messageMinWidth;
+  padding: @messagePadding;
+  margin-top: @messageMarginTop;
+  user-select: none !important;
+  border-radius: @messageBorderRadius;
+  .iconfont {
+    padding-top: 3px;
+    font-size: @messageIconfontFontSize;
+    line-height: @messageIconfontLineHeight;
+  }
+  .el-message__content {
+    margin-left: @messageContentMarginLeft;
+    font-family: @messageContentFontFamily;
+    font-size: @messageContentFontSize;
+    font-weight: @messageContentFontWeight;
+    line-height: @messageContentLineHeight;
+  }
+}
+
+// 消息提示-成功
+.ms-message-success {
+  background: @messageSuccessBackground;
+  border: @messageSuccessBorder;
+  .iconfont {
+    color: @messageSuccessIconfontColor;
+  }
+  .el-message__content {
+    color: @messageSuccessContentColor;
+  }
+}
+
+// 消息提示-警告
+.ms-message-warning {
+  background: @messageWarningBackground;
+  border: @messageWarningBorder;
+  .iconfont {
+    color: @messageWarningIconfontColor;
+  }
+  .el-message__content {
+    color: @messageWarningContentColor;
+  }
+}
+
+// 消息提示-普通
+.ms-message-info {
+  background: @messageInfoBackground;
+  border: @messageInfoBorder;
+  .iconfont {
+    color: @messageInfoIconfontColor;
+  }
+  .el-message__content {
+    color: @messageInfoContentColor;
+  }
+}
+
+// 消息提示-错误
+.ms-message-error {
+  background: @messageErrorBackground;
+  border: @messageErrorBorder;
+  .iconfont {
+    color: @messageErrorIconfontColor;
+  }
+  .el-message__content {
+    color: @messageErrorContentColor;
+  }
+}

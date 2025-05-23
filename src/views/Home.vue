@@ -1,11 +1,9 @@
 <template>
-  <div class='home'>
+  <div class="home">
     <div @click="go('/button')">我是按钮</div>
     <div @click="go('/datepick')">日期</div>
+    <div @click="go('/input')">输入框/单选/多选/下拉选</div>
     <div>按钮</div>
-    <div>按钮</div>
-    <i class="el-icon-edit"></i>
-    <i class="icon_td-disable-F"></i>
   </div>
 </template>
 
@@ -38,7 +36,7 @@ export default {
   activated() {}, // 如果页面有keep-alive缓存功能，这个函数会触发
 };
 </script>
-<style lang='less' scoped>
+<style lang="less" scoped>
 .home {
   width: 100%;
   height: 100%;

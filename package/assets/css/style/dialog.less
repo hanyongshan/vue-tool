@@ -1,0 +1,34 @@
+// 对话框
+.ms-dialog {
+  background: @dialogBackground;
+  border: @dialogBorder;
+  border-radius: @dialogBorderRadius;
+  box-shadow: @dialogBoxShadow;
+  .el-dialog__header {
+    padding: @dialogHeaderPadding;
+    background: @dialogHeaderBackground;
+    box-shadow: @dialogHeaderBoxShadow;
+    .el-dialog__title {
+      font-family: @dialogHeaderTitleFontFamily;
+      font-size: @dialogHeaderTitleFontSize;
+      font-weight: @dialogHeaderTitleFontWeight;
+      line-height: @dialogHeaderTitleLineHeight;
+      color: @dialogHeaderTitleColor;
+    }
+    .el-dialog__headerbtn {
+      top: @dialogHeaderbtnTop;
+      right: @dialogHeaderbtnRight;
+      .el-icon-close {
+        font-weight: @dialogHeaderbtnIconCloseFontWeight;
+        color: @dialogHeaderbtnIconCloseColor;
+      }
+    }
+  }
+  .el-dialog__body {
+    padding: @dialogBodyPadding;
+  }
+  .el-dialog__footer {
+    padding: @dialogFooterPadding;
+    box-shadow: @dialogFooterBoxShadow;
+  }
+}

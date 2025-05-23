@@ -1,0 +1,120 @@
+.el-checkbox-group {
+  font-size: unset;
+}
+
+// 复选框
+.ms-checkbox {
+  height: @checkboxHeight !important;
+  margin-right: @checkboxMarginRight;
+  font-family: @checkboxFontFamily;
+  font-weight: @checkboxFontWeight;
+  line-height: @checkboxLineHeight;
+  color: @checkboxColor;
+  user-select: none;
+  .el-checkbox__label {
+    padding-left: @checkboxLabelPaddingLeft;
+    font-size: @checkboxLabelFontSize;
+    color: @checkboxLabelColor;
+  }
+  .el-checkbox__input {
+    & > .el-checkbox__inner {
+      width: @checkboxInputInnerWidth;
+      height: @checkboxInputInnerHeight;
+      background: @checkboxInputInnerBackground;
+      border: @checkboxInputInnerBorder;
+      border-radius: @checkboxInputInnerBorderRadius;
+      transition: none;
+    }
+    &.is-checked {
+      .el-checkbox__inner::after {
+        top: @checkboxInputCheckedInnerAfterTop;
+        left: @checkboxInputCheckedInnerAfterLeft;
+      }
+    }
+    &.is-checked:not(.is-disabled) {
+      .el-checkbox__inner {
+        background: @checkboxInputCheckedNotDisabledInnerBackground;
+        box-shadow: @checkboxInputCheckedNotDisabledInnerBoxShadow;
+      }
+    }
+    &.is-disabled.el-checkbox__input {
+      cursor: not-allowed;
+    }
+    &.is-disabled.is-checked {
+      .el-checkbox__inner {
+        background: @checkboxInputDisabledCheckedInnerBackground;
+        border: @checkboxInputDisabledCheckedInnerBorder;
+      }
+      .el-checkbox__inner::after {
+        border-color: @checkboxInputDisabledCheckedInnerAfterBorderColor;
+      }
+    }
+    &.is-disabled:not(.is-checked) {
+      .el-checkbox__inner {
+        background: @checkboxInputDisabledNotCheckedInnerBackground;
+        border: @checkboxInputDisabledNotCheckedInnerBorder;
+      }
+    }
+    &.is-indeterminate {
+      .el-checkbox__inner {
+        &::before {
+          top: @checkboxInputIndeterminateInnerBeforeTop;
+        }
+      }
+    }
+  }
+  & + & {
+    margin-left: @checkboxMarginLeft;
+  }
+  &.is-disabled {
+    cursor: not-allowed;
+  }
+  &.is-bordered {
+    padding: @checkboxBorderedPadding;
+    line-height: @checkboxBorderedLineHeight;
+    background: @checkboxBorderedBackground;
+    border-color: @checkboxBorderedBorderColor;
+    border-radius: @checkboxBorderedBorderRadius;
+    &.is-checked {
+      border-color: @checkboxBorderedCheckedBorderColor;
+    }
+    .el-checkbox__input {
+      & > .el-checkbox__inner {
+        background: @checkboxBorderedInputInnerBackground;
+        border-color: @checkboxBorderedInputInnerBorderColor;
+        border-radius: @checkboxBorderedInputInnerBorderRadius;
+        box-shadow: @checkboxBorderedInputInnerBoxShadow;
+      }
+      &.is-checked {
+        & > .el-checkbox__inner {
+          background: @checkboxBorderedInputCheckedInnerBackground;
+          box-shadow: @checkboxBorderedInputCheckedInnerBoxShadow;
+        }
+      }
+    }
+    &.is-disabled {
+      background: @checkboxBorderedDisabledBackground;
+      border-color: @checkboxBorderedDisabledBorderColor;
+      box-shadow: @checkboxBorderedDisabledBoxShadow;
+      .el-checkbox__label {
+        color: @checkboxBorderedDisabledLabelColor;
+      }
+      .el-checkbox__input {
+        & > .el-checkbox__inner {
+          background: @checkboxBorderedDisabledInputInnerBackground;
+          border-color: @checkboxBorderedDisabledInputInnerBorderColor;
+          box-shadow: @checkboxBorderedDisabledInputInnerBoxShadow inset;
+        }
+        &.is-checked {
+          & > .el-checkbox__inner {
+            background: @checkboxBorderedDisabledInputCheckedInnerBackground;
+            box-shadow: @checkboxBorderedDisabledInputCheckedInnerBoxShadow;
+          }
+          .el-checkbox__inner::after {
+            border-color: @checkboxBorderedDisabledInputCheckedInnerAfterBorderColor;
+          }
+        }
+      }
+    }
+  }
+}

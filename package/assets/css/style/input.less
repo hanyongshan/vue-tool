@@ -1,0 +1,214 @@
+// 输入框
+.ms-input {
+  width: @inputWidth;
+  height: @inputHeight;
+  .el-input__inner {
+    height: @inputInnerHeight;
+    padding: @inputInnerPadding;
+    font-family: @inputInnerFontFamily;
+    font-size: @inputInnerFontSize;
+    font-weight: @inputInnerFontWeight;
+    line-height: @inputInnerLineHeight;
+    color: @inputInnerColor;
+    background: @inputInnerBackground;
+    border: @inputInnerBorder;
+    border-radius: @inputInnerBorderRadius;
+    &:hover {
+      border-color: @inputInnerHoverBorderColor;
+    }
+    &:focus {
+      border-color: @inputInnerFocusBorderColor;
+      outline: none;
+      box-shadow: @inputInnerFocusBoxShadow;
+    }
+  }
+  &.el-input--suffix {
+    .el-input__inner {
+      padding: @inputSuffixInnerPadding;
+      &:hover,
+      &:focus {
+        padding: @inputSuffixInnerHoverFocusPadding;
+      }
+    }
+  }
+  &.is-disabled {
+    .el-input__inner {
+      padding: @inputDisabledInnerPadding;
+      background: @inputDisabledInnerBackground;
+      border: @inputDisabledInnerBorder;
+      &:hover,
+      &:focus {
+        padding: @inputDisabledInnerHoverFocusPadding;
+      }
+    }
+  }
+  input::input-placeholder {
+    color: @inputPlaceholderColor;
+  }
+  .el-input__suffix {
+    top: @inputSuffixTop;
+    right: @inputSuffixRight;
+    width: @inputSuffixWidth;
+    height: @inputSuffixHeight;
+    overflow: hidden;
+    .el-input__clear {
+      line-height: @inputSuffixClearLineHeight;
+      background-color: @inputSuffixClearBackgroundColor;
+      transition: none;
+      &::before {
+        font-size: @inputSuffixClearBeforeFontSize;
+        color: @inputSuffixClearBeforeColor;
+        content: '';
+      }
+    }
+    .el-input__validateIcon {
+      display: none;
+    }
+  }
+}
+
+// 文本域
+.ms-textarea {
+  width: @textareaWidth;
+  vertical-align: top;
+  .el-textarea__inner {
+    padding: @textareaInnerPadding;
+    overflow-y: hidden;
+    font-family: @textareaInnerFontFamily;
+    font-size: @textareaInnerFontSize;
+    font-weight: @textareaInnerFontWeight;
+    line-height: @textareaInnerLineHeight;
+    color: @textareaInnerColor;
+    word-break: break-all;
+    background: @textareaInnerBackground;
+    border: @textareaInnerBorder;
+    border-radius: @textareaInnerBorderRadius;
+    &:hover {
+      border-color: @textareaInnerHoverBorderColor;
+    }
+    &:focus {
+      border-color: @textareaInnerFocusBorderColor;
+      outline: none;
+      box-shadow: @textareaInnerFocusBoxShadow;
+    }
+  }
+  &.is-disabled {
+    .el-textarea__inner {
+      padding: @textareaDisabledInnerPadding;
+      background: @textareaDisabledInnerBackground;
+      border: @textareaDisabledInnerBorder;
+    }
+  }
+  textarea::input-placeholder {
+    color: @textareaPlaceholderColor;
+  }
+}
+
+// 后接按钮
+.ms-input-append-button {
+  .el-input__inner {
+    border-radius: @inputAppendButtonInnerBorderRadius;
+  }
+  .el-input-group__append {
+    padding: @inputAppendButtonAppendPadding;
+    background: @inputAppendButtonAppendBackground;
+    border: @inputAppendButtonAppendBorder;
+    border-left: @inputAppendButtonAppendBorderLeft;
+    .el-button {
+      padding: @inputAppendButtonAppendButtonPadding;
+      font-size: @inputAppendButtonAppendButtonFontSize;
+      line-height: @inputAppendButtonAppendButtonLineHeight;
+      color: @inputAppendButtonAppendButtonColor;
+      transition: none;
+    }
+  }
+  &.is-disabled {
+    .el-input-group__append {
+      background: @inputAppendButtonDisabledAppendBackground;
+      border-color: @inputAppendButtonDisabledAppendBorderColor;
+      .el-button {
+        color: @inputAppendButtonDisabledAppendButtonColor;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+// 复合型输入框
+.ms-input-composite {
+  .el-input-group__prepend,
+  .el-input-group__append {
+    font-size: @inputCompositePrependAppendFontSize;
+    cursor: default;
+    border: @inputCompositePrependAppendBorder;
+  }
+  &.el-input-group--prepend {
+    .el-input-group__prepend {
+      border-radius: @inputCompositePrependBorderRadius;
+      .ms-select .el-input__inner {
+        border-top-right-radius: @inputCompositePrependSelectInnerBorderTopRightRadius;
+        border-bottom-right-radius: @inputCompositePrependSelectInnerBorderBottomRightRadius;
+        border: 1px solid #c6cfde;
+        line-height: 29px;
+      }
+    }
+    .el-input__inner {
+      border-left-width: @inputCompositePrependInnerBorderLeftWidth;
+      border-top-left-radius: @inputCompositePrependInnerBorderTopLeftRadius;
+      border-bottom-left-radius: @inputCompositePrependInnerBorderBottomLeftRadius;
+    }
+  }
+  &.el-input-group--append {
+    .el-input-group__append {
+      border-radius: @inputCompositeAppendBorderRadius;
+      .ms-select .el-input__inner {
+        border-top-left-radius: @inputCompositeAppendSelectInnerBorderTopLeftRadius;
+        border-bottom-left-radius: @inputCompositeAppendSelectInnerBorderBottomLeftRadius;
+        border: 1px solid #c6cfde;
+        line-height: 29px;
+      }
+    }
+    .el-input__inner {
+      border-right-width: @inputCompositeAppendInnerBorderRightWidth;
+      border-top-right-radius: @inputCompositeAppendInnerBorderTopRightRadius;
+      border-bottom-right-radius: @inputCompositeAppendInnerBorderBottomRightRadius;
+    }
+  }
+  &:not(.composite-select--prepend) .el-input-group__prepend,
+  &:not(.composite-select--append) .el-input-group__append {
+    padding: @inputCompositeNotSelectPrependAppendPadding;
+    font-family: @inputCompositeNotSelectPrependAppendFontFamily;
+    font-weight: @inputCompositeNotSelectPrependAppendFontWeight;
+    line-height: @inputCompositeNotSelectPrependAppendLineHeight;
+    color: @inputCompositeNotSelectPrependAppendColor;
+    background: @inputCompositeNotSelectPrependAppendBackground;
+    border: @inputCompositeNotSelectPrependAppendBorder;
+  }
+  &.composite-select--prepend .el-input-group__prepend,
+  &.composite-select--append .el-input-group__append {
+    padding: @inputCompositeSelectPrependAppendPadding;
+    .ms-select {
+      width: @inputCompositeSelectPrependAppendSelectWidth;
+      .el-input__inner {
+        padding: @inputCompositeSelectPrependAppendSelectInnerPadding;
+      }
+    }
+  }
+  &.is-disabled:not(.composite-select--prepend) .el-input-group__prepend,
+  &.is-disabled:not(.composite-select--append) .el-input-group__append {
+    padding: @inputCompositeDisabledNotSelectPrependAppendPadding;
+    cursor: not-allowed;
+    background: @inputCompositeDisabledNotSelectPrependAppendBackground;
+    border: @inputCompositeDisabledNotSelectPrependAppendBorder;
+  }
+  &.is-disabled.composite-select--prepend .el-input-group__prepend,
+  &.is-disabled.composite-select--append .el-input-group__append {
+    padding: @inputCompositeDisabledSelectPrependAppendPadding;
+    background: @inputCompositeDisabledSelectPrependAppendBackground;
+    border-width: @inputCompositeDisabledSelectPrependAppendSelectInnerBorderWidth;
+    .ms-select .el-input.is-disabled .el-input__inner {
+      background: @inputCompositeDisabledSelectPrependAppendSelectInnerBackground;
+      border: @inputCompositeDisabledSelectPrependAppendSelectInnerBorder;
+    }
+  }
+}

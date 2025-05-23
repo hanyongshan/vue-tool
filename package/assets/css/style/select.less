@@ -1,0 +1,217 @@
+// 下拉选择器
+.ms-select {
+  width: @selectWidth;
+  height: @selectHeight;
+  user-select: none;
+  .el-input {
+    .el-input__inner {
+      height: @selectInputInnerHeight;
+      padding: @selectInputInnerPadding;
+      font-family: @selectInputInnerFontFamily;
+      font-size: @selectInputInnerFontSize;
+      font-weight: @selectInputInnerFontWeight;
+      line-height: @selectInputInnerLineHeight;
+      color: @selectInputInnerColor;
+      background: @selectInputInnerBackground;
+      border: @selectInputInnerBorder;
+      border-radius: @selectInputInnerBorderRadius;
+      &:hover {
+        border-color: @selectInputInnerHoverBorderColor;
+      }
+      &:focus {
+        border-color: @selectInputInnerFocusBorderColor;
+        outline: none;
+        box-shadow: @selectInputInnerFocusBoxShadow;
+      }
+    }
+    &.is-disabled {
+      .el-input__inner {
+        background: @selectInputDisabledInnerBackground;
+        border: @selectInputDisabledInnerBorder;
+      }
+    }
+    input::input-placeholder {
+      color: @selectInputPlaceholderColor;
+    }
+    .el-input__suffix {
+      right: @selectInputSuffixRight;
+      width: @selectInputSuffixWidth;
+      height: @selectInputSuffixHeight;
+      .el-icon-circle-close {
+        line-height: @selectInputSuffixIconCircleCloseLineHeight;
+        transition: none;
+        &::before {
+          font-size: @selectInputSuffixIconCircleCloseBeforeFontSize;
+          color: @selectInputSuffixIconCircleCloseBeforeColor;
+          content: '';
+        }
+      }
+      .el-icon-arrow-up {
+        line-height: @selectInputSuffixIconArrowUpLineHeight;
+        &::before {
+          font-size: @selectInputSuffixIconArrowUpBeforeFontSize;
+          color: @selectInputSuffixIconArrowUpBeforeColor;
+          content: '';
+        }
+      }
+    }
+  }
+  .el-select__tags {
+    flex-wrap: unset;
+    align-items: center;
+    margin-left: @selectTagsMarginLeft;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      height: @selectTagsWebkitScrollbarHeight;
+    }
+    .el-tag {
+      max-width: @selectTagsMaxWidth;
+      &.el-tag--info {
+        height: @selectTagsInfoHeight;
+        padding: @selectTagsInfoPadding;
+        line-height: @selectTagsInfoLineHeight;
+        color: @selectTagsInfoColor;
+        background: @selectTagsInfoBackground;
+        border: @selectTagsInfoBorder;
+        .el-tag__close {
+          color: @selectTagsInfoCloseColor;
+          background: @selectTagsInfoCloseBackground;
+        }
+        .el-icon-close {
+          transform: scale(0.65);
+        }
+        .el-select__tags-text {
+          text-overflow: clip;
+        }
+      }
+    }
+    .el-select__input {
+      width: @selectTagsInputWidth;
+      margin-left: @selectTagsInputMarginLeft;
+      font-family: @selectTagsInputFontFamily;
+      font-size: @selectTagsInputFontSize;
+      font-weight: @selectTagsInputFontWeight;
+      color: @selectTagsInputColor;
+    }
+  }
+}
+// 下拉选择器-无边框
+.ms-select-noborder {
+  height: @selectNoborderHeight;
+  .el-input {
+    .el-input__inner {
+      height: @selectNoborderInputInnerHeight;
+      line-height: @selectNoborderInputInnerLineHeight;
+      background: @selectNoborderInputInnerBackground;
+      border: @selectNoborderInputInnerBorder;
+      box-shadow: @selectNoborderInputInnerBoxShadow;
+      &:hover {
+        border: @selectNoborderInputInnerHoverBorder;
+        box-shadow: @selectNoborderInputInnerHoverBoxShadow;
+      }
+      &:focus {
+        border: @selectNoborderInputInnerFocusBorder;
+        box-shadow: @selectNoborderInputInnerFocusBoxShadow;
+      }
+    }
+    &.is-disabled {
+      .el-input__inner {
+        background: @selectNoborderInputDisabledBackground;
+        border: @selectNoborderInputDisabledBorder;
+        box-shadow: @selectNoborderInputDisabledBoxShadow;
+      }
+    }
+    .el-input__suffix {
+      height: @selectNoborderInputSuffixHeight;
+      .el-icon-circle-close {
+        line-height: @selectNoborderInputSuffixIconCircleCloseLineHeight;
+      }
+      .el-icon-arrow-up {
+        line-height: @selectNoborderInputSuffixIconArrowUpLineHeight;
+      }
+    }
+  }
+}
+
+// 下拉选择器-表格中
+.ms-select-intable {
+  height: @selectIntableHeight;
+  .el-input {
+    .el-input__inner {
+      height: @selectIntableInputInnerHeight;
+      padding: @selectIntableInputInnerPadding;
+      line-height: @selectIntableInputInnerLineHeight;
+      border-radius: @selectIntableInputInnerBorderRadius;
+    }
+    .el-input__suffix {
+      height: @selectIntableInputSuffixHeight;
+      .el-icon-circle-close {
+        line-height: @selectIntableInputSuffixIconCircleCloseLineHeight;
+      }
+      .el-icon-arrow-up {
+        line-height: @selectIntableInputSuffixIconArrowUpLineHeight;
+      }
+    }
+  }
+}
+
+// 下拉选择器-菜单
+.ms-select-popper {
+  z-index: 9999998;
+  user-select: none;
+  .el-select-dropdown__wrap {
+    max-height: @selectPopperDropdownWrapMaxHeight;
+  }
+  &.el-popper[x-placement^='bottom'] {
+    margin-top: @selectPopperBottomMarginTop;
+    margin-bottom: @selectPopperBottomMarginBottom;
+  }
+  &.el-popper[x-placement^='top'] {
+    margin-top: @selectPopperTopMarginTop;
+    margin-bottom: @selectPopperTopMarginBottom;
+  }
+  .popper__arrow {
+    border-width: @selectPopperArrowBorderWidth;
+    &::after {
+      border-width: @selectPopperArrowAfterBorderWidth;
+    }
+  }
+  &.el-select-dropdown {
+    background: @selectPopperDropdownBackground;
+    border: @selectPopperDropdownBorder;
+    box-shadow: @selectPopperDropdownBoxShadow;
+    .el-select-dropdown__list {
+      padding: @selectPopperDropdownListPadding;
+      .el-select-dropdown__item {
+        height: @selectPopperDropdownListItemHeight;
+        padding: @selectPopperDropdownListItemPadding;
+        font-family: @selectPopperDropdownListItemFontFamily;
+        font-size: @selectPopperDropdownListItemFontSize;
+        font-weight: @selectPopperDropdownListItemFontWeight;
+        line-height: @selectPopperDropdownListItemLineHeight;
+        color: @selectPopperDropdownListItemColor;
+        &:hover {
+          background: @selectPopperDropdownListItemHoverBackground;
+        }
+        &.selected {
+          color: @selectPopperDropdownListItemSelectedColor;
+          background: @selectPopperDropdownListItemSelectedBackground;
+          &::after {
+            right: @selectPopperDropdownListItemSelectedAfterRight;
+          }
+        }
+      }
+    }
+    .el-scrollbar.is-empty {
+      display: none;
+    }
+    .el-select-dropdown__empty {
+      padding: @selectPopperDropdownEmptyPadding;
+      font-family: @selectPopperDropdownEmptyFontFamily;
+      font-size: @selectPopperDropdownEmptyFontSize;
+      font-weight: @selectPopperDropdownEmptyFontWeight;
+      line-height: @selectPopperDropdownEmptyLineHeight;
+      color: @selectPopperDropdownEmptyColor;
+    }
+  }
+}
