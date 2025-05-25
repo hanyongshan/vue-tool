@@ -42,6 +42,10 @@
 export default {
   // import引入的组件需要注入到对象中才能使用
   name: 'MsCustSelect',
+  model: {
+    prop: 'values',
+    event: 'change',
+  },
   props: {
     innerWidth: {
       type: [String, Number],
@@ -58,12 +62,17 @@ export default {
       require: false,
       default: true,
     },
+    values: {
+      type: String,
+      require: false,
+      default: '',
+    },
   },
   components: {},
   data() {
     // 这里存放数据
     return {
-      selectValue: '',
+      selectValue: this.values,
       visible: false,
       boundaries: null,
       selectOptions: [
@@ -95,7 +104,11 @@ export default {
       return parseFloat(this.innerWidth);
     },
   },
-  watch: {},
+  watch: {
+    selectValue(value) {
+      this.$emit('change', value);
+    },
+  },
   methods: {
     eventSelect(item) {
       this.selectValue = item.label;

@@ -3,7 +3,10 @@
   <div class=''>
     <div class="tip">自定义下拉选（el-popover）</div>
     <div class="content">
-      <ms-cust-select></ms-cust-select>
+      <ms-cust-select
+        v-model="value"
+        innerWidth="300px"
+      ></ms-cust-select>
     </div>
   </div>
 </template>
@@ -15,10 +18,16 @@ export default {
   components: {},
   data() {
     // 这里存放数据
-    return {};
+    return {
+      value: '双皮奶',
+    };
   },
   computed: {},
-  watch: {},
+  watch: {
+    value(v) {
+      console.log('选中的值', v);
+    },
+  },
   methods: {},
   // 生命周期 - 创建完成（可以访问当前this实例）
   created() {},
