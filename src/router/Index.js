@@ -8,7 +8,8 @@ Vue.use(VueRouter);
 const HomeIndex = () => import('@/views/Home.vue');
 const ButtonIndex = () => import('@/views/assembly/Button.vue');
 const DatePick = () => import('@/views/assembly/DatePick.vue');
-const InputIndex = () => import('@/views/assembly/InputIndex.vue');
+const InputIndex = () => import('@/views/assembly/Input.vue');
+const SelectIndex = () => import('@/views/assembly/Select.vue');
 
 // 3. 定义路由规则
 const routes = [
@@ -31,6 +32,11 @@ const routes = [
     path: '/input',
     name: 'InputIndex',
     component: InputIndex,
+  },
+  {
+    path: '/select',
+    name: 'SelectIndex',
+    component: SelectIndex,
   },
 ];
 

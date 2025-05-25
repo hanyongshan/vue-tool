@@ -1,16 +1,17 @@
+<!--  -->
 <template>
-  <div class="home">
-    <div @click="go('/button')">我是按钮</div>
-    <div @click="go('/datepick')">日期</div>
-    <div @click="go('/input')">输入框/单选/多选/下拉选</div>
-    <div @click="go('/select')">下拉组件</div>
+  <div class=''>
+    <div class="tip">自定义下拉选（el-popover）</div>
+    <div class="content">
+      <ms-cust-select></ms-cust-select>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   // import引入的组件需要注入到对象中才能使用
-  name: 'HomeIndex',
+  name: 'SelectIndex',
   components: {},
   data() {
     // 这里存放数据
@@ -18,11 +19,7 @@ export default {
   },
   computed: {},
   watch: {},
-  methods: {
-    go(path) {
-      this.$router.push(path);
-    },
-  },
+  methods: {},
   // 生命周期 - 创建完成（可以访问当前this实例）
   created() {},
   // 生命周期 - 挂载完成（可以访问DOM元素）
@@ -36,22 +33,6 @@ export default {
   activated() {}, // 如果页面有keep-alive缓存功能，这个函数会触发
 };
 </script>
-<style lang="less" scoped>
-.home {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  div {
-    width: 200px;
-    text-align: center;
-    line-height: 30px;
-    height: 30px;
-    border: 1px solid;
-    margin: 5px;
-    cursor: pointer;
-  }
-}
+<style lang='less' scoped>
+// @import url(); 引入公共css类
 </style>
