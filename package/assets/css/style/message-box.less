@@ -1,0 +1,49 @@
+// 弹框
+.ms-message-box {
+  max-width: @messageBoxMaxWidth;
+  user-select: none !important;
+  background: @messageBoxBackground;
+  border: @messageBoxBorder;
+  border-radius: @messageBoxBorderRadius;
+  box-shadow: @messageBoxBoxShadow;
+  .el-message-box__header {
+    padding: @messageBoxHeaderPadding;
+    background: @messageBoxHeaderBackground;
+    box-shadow: @messageBoxHeaderBoxShadow;
+    .el-message-box__title {
+      font-family: @messageBoxHeaderTitleFontFamily;
+      font-size: @messageBoxHeaderTitleFontSize;
+      font-weight: @messageBoxHeaderTitleFontWeight;
+      color: @messageBoxHeaderTitleColor;
+    }
+    .el-message-box__headerbtn {
+      top: @messageBoxHeaderbtnTop;
+      right: @messageBoxHeaderbtnRight;
+      .el-icon-close {
+        font-weight: @messageBoxHeaderbtnIconCloseFontWeight;
+        color: @messageBoxHeaderbtnIconCloseColor;
+      }
+    }
+  }
+  .el-message-box__content {
+    padding: @messageBoxContentPadding;
+    .el-message-box__status {
+      font-size: @messageBoxContentStatusFontSize;
+    }
+    .el-message-box__message {
+      padding-right: @messageBoxContentMessagePaddingRight;
+      padding-left: @messageBoxContentMessagePaddingLeft;
+      font-family: @messageBoxContentMessageFontFamily;
+      font-size: @messageBoxContentMessageFontSize;
+      font-weight: @messageBoxContentMessageFontWeight;
+      color: @messageBoxContentMessageColor;
+      p {
+        line-height: @messageBoxContentMessagePLineHeight;
+      }
+    }
+  }
+  .el-message-box__btns {
+    padding: @messageBoxBtnsPadding;
+    box-shadow: @messageBoxBtnsBoxShadow;
+  }
+}

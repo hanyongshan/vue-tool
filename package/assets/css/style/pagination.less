@@ -1,0 +1,132 @@
+// 分页
+.ms-pagination {
+  user-select: none !important;
+  slot {
+    span {
+      margin-left: @--paginationSlotSpanMarginLeft;
+      font-family: @--paginationSlotSpanFontFamily;
+      font-size: @--paginationSlotSpanFontSize;
+      font-weight: @--paginationSlotSpanFontWeight;
+      color: @--paginationSlotSpanColor;
+    }
+  }
+  &.is-background {
+    .btn-prev {
+      min-width: @--paginationBackgroundBtnPrevMinWidth;
+      height: @--paginationBackgroundBtnPrevHeight;
+      padding: @--paginationBackgroundBtnPrevPadding;
+      margin: @--paginationBackgroundBtnPrevMargin;
+      line-height: @--paginationBackgroundBtnPrevLineHeight;
+      color: @--paginationBackgroundBtnPrevColor;
+      background-color: @--paginationBackgroundBtnPrevBackgroundColor;
+      border: @--paginationBackgroundBtnPrevBorder;
+      border-radius: @--paginationBackgroundBtnPrevBorderRadius;
+      &:disabled {
+        color: @--paginationBackgroundBtnPrevDisabledColor;
+      }
+    }
+    .el-pager {
+      li {
+        min-width: @--paginationBackgroundPagerLiMinWidth;
+        height: @--paginationBackgroundPagerLiHeight;
+        padding: @--paginationBackgroundPagerLiPadding;
+        margin: @--paginationBackgroundPagerLiMargin;
+        font-family: @--paginationBackgroundPagerLiFontFamily;
+        font-size: @--paginationBackgroundPagerLiFontSize;
+        font-weight: @--paginationBackgroundPagerLiFontWeight;
+        line-height: @--paginationBackgroundPagerLiLineHeight;
+        color: @--paginationBackgroundPagerLiColor;
+        background-color: @--paginationBackgroundPagerLiBackgroundColor;
+        border: @--paginationBackgroundPagerLiBorder;
+        border-radius: @--paginationBackgroundPagerLiBorderRadius;
+        &:not(.disabled) {
+          &:hover {
+            color: @--paginationBackgroundPagerLiNotDisabledHoverColor;
+            background-color: @--paginationBackgroundPagerLiNotDisabledHoverBackgroundColor;
+            border-color: @--paginationBackgroundPagerLiNotDisabledHoverBorderColor;
+          }
+          &.active {
+            color: @--paginationBackgroundPagerLiNotDisabledActiveColor;
+            background-color: @--paginationBackgroundPagerLiNotDisabledActiveBackgroundColor;
+            border-color: @--paginationBackgroundPagerLiNotDisabledActiveBorderColor;
+          }
+        }
+      }
+      .more {
+        &::before {
+          line-height: @--paginationBackgroundPagerMoreBeforeLineHeight;
+        }
+      }
+    }
+    .btn-next {
+      min-width: @--paginationBackgroundBtnNextMinWidth;
+      height: @--paginationBackgroundBtnNextHeight;
+      padding: @--paginationBackgroundBtnNextPadding;
+      margin: @--paginationBackgroundBtnNextMargin;
+      line-height: @--paginationBackgroundBtnNextLineHeight;
+      color: @--paginationBackgroundBtnNextColor;
+      background-color: @--paginationBackgroundBtnNextBackgroundColor;
+      border: @--paginationBackgroundBtnNextBorder;
+      border-radius: @--paginationBackgroundBtnNextBorderRadius;
+      &:disabled {
+        color: @--paginationBackgroundBtnNextDisabledColor;
+      }
+    }
+  }
+  &:not(.is-background) {
+    .btn-prev {
+      min-width: @--paginationNotBackgroundBtnPrevMinWidth;
+      height: @--paginationNotBackgroundBtnPrevHeight;
+      padding: @--paginationNotBackgroundBtnPrevPadding;
+      margin: @--paginationNotBackgroundBtnPrevMargin;
+      line-height: @--paginationNotBackgroundBtnPrevLineHeight;
+      color: @--paginationNotBackgroundBtnPrevColor;
+      background: @--paginationNotBackgroundBtnPrevBackground;
+      &:disabled {
+        color: @--paginationNotBackgroundBtnPrevDisabledColor;
+      }
+    }
+    .el-pager {
+      li {
+        min-width: @--paginationNotBackgroundPagerLiMinWidth;
+        height: @--paginationNotBackgroundPagerLiHeight;
+        padding: @--paginationNotBackgroundPagerLiPadding;
+        margin: @--paginationNotBackgroundPagerLiMargin;
+        font-family: @--paginationNotBackgroundPagerLiFontFamily;
+        font-size: @--paginationNotBackgroundPagerLiFontSize;
+        font-weight: @--paginationNotBackgroundPagerLiFontWeight;
+        line-height: @--paginationNotBackgroundPagerLiLineHeight;
+        color: @--paginationNotBackgroundPagerLiColor;
+        background: @--paginationNotBackgroundPagerLiBackground;
+        &:not(.disabled) {
+          &:hover,
+          &.active {
+            color: @--paginationNotBackgroundPagerLiNotDisabledHoverActiveColor;
+          }
+        }
+      }
+      .more {
+        &::before {
+          line-height: @--paginationNotBackgroundPagerMoreBeforeLineHeight;
+        }
+      }
+    }
+    .btn-next {
+      min-width: @--paginationNotBackgroundBtnNextMinWidth;
+      height: @--paginationNotBackgroundBtnNextHeight;
+      padding: @--paginationNotBackgroundBtnNextPadding;
+      margin: @--paginationNotBackgroundBtnNextMargin;
+      line-height: @--paginationNotBackgroundBtnNextLineHeight;
+      color: @--paginationNotBackgroundBtnNextColor;
+      background: @--paginationNotBackgroundBtnNextBackground;
+      &:disabled {
+        color: @--paginationNotBackgroundBtnNextDisabledColor;
+      }
+    }
+    slot {
+      span {
+        margin-left: @--paginationNotBackgroundSlotSpanMarginLeft;
+      }
+    }
+  }
+}

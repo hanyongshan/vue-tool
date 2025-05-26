@@ -1,0 +1,262 @@
+// 表格列宽拖拽线
+.el-table__column-resize-proxy {
+  border-color: @--tableColumnResizeProxyBorderColor;
+}
+
+// 表格
+.ms-table {
+  font-family: @--tableFontFamily;
+  font-size: @--tableFontSize;
+  font-weight: @--tableFontWeight;
+  border: @--tableBorder;
+  &::before {
+    height: @--tableBeforeHeight;
+  }
+  &::after {
+    width: @--tableAfterWidth;
+  }
+  thead {
+    color: @--tableTheadColor;
+    tr {
+      th {
+        height: @--tableTheadTrThHeight;
+        padding: @--tableTheadTrThPadding;
+        font-weight: @--tableTheadTrThFontWeight;
+        color: @--tableTheadTrThColor;
+        background: @--tableTheadTrThBackground;
+        border-right: @--tableTheadTrThBorderRight;
+        border-bottom: @--tableTheadTrThBorderBottom;
+        box-shadow: @--tableTheadTrThBoxShadow;
+        .cell {
+          padding: @--tableTheadTrThCellPadding;
+          line-height: @--tableTheadTrThCellLineHeight;
+        }
+        &:not(.is-leaf, .is-hidden) {
+          border-bottom: @--tableTheadTrThNotLeafHiddenBorderBottom;
+        }
+        &.gutter {
+          border-right: @--tableTheadTrThGutterBorderRight;
+        }
+      }
+    }
+    &.is-group {
+      tr {
+        &:not(:last-child) {
+          th {
+            &:nth-last-child(2) {
+              border-right: @--tableTheadGroupTrNotLastThNthLast2BorderRight;
+            }
+          }
+        }
+      }
+    }
+    &:not(.is-group) {
+      tr {
+        th {
+          &:nth-last-child(2) {
+            border-right: @--tableTheadNotGroupTrThNthLast2BorderRight;
+          }
+        }
+      }
+    }
+  }
+  .el-table__body {
+    width: @--tableBodyWidth;
+    table-layout: fixed !important;
+    tr {
+      td {
+        padding: @--tableBodyTrTdPadding;
+        color: @--tableBodyTrTdColor;
+        background-color: @--tableBodyTrTdBackgroundColor;
+        border-right: @--tableBodyTrTdBorderRight;
+        border-bottom: @--tableBodyTrTdBorderBottom;
+        box-shadow: @--tableBodyTrTdBoxShadow;
+        .cell {
+          width: @--tableBodyTrTdCellWidth;
+          padding: @--tableBodyTrTdCellPadding;
+          line-height: @--tableBodyTrTdCellLineHeight;
+          .el-form-item {
+            margin-bottom: @--tableBodyTrTdCellFormItemMarginBottom;
+          }
+          .ms-checkbox {
+            line-height: @--tableBodyTrTdCellCheckboxLineHeight;
+            .el-checkbox__input {
+              height: @--tableBodyTrTdCellCheckboxInputHeight;
+            }
+          }
+          &.el-tooltip {
+            width: @--tableBodyTrTdCellTooltipWidth;
+          }
+        }
+        &:last-child {
+          border-right: @--tableBodyTrTdLastBorderRight;
+          .cell {
+            overflow: visible !important;
+          }
+        }
+      }
+      &.el-table__row--striped {
+        td {
+          background-color: @--tableBodyTrRowStripedTdBackgroundColor;
+          box-shadow: @--tableBodyTrRowStripedTdBoxShadow;
+        }
+      }
+      &.hover-row {
+        td {
+          background-color: @--tableBodyTrHoverRowTdBackgroundColor;
+          box-shadow: @--tableBodyTrHoverRowTdBoxShadow;
+        }
+      }
+      &:hover {
+        td {
+          background-color: @--tableBodyTrHoverTdBackgroundColor;
+          box-shadow: @--tableBodyTrHoverTdBoxShadow;
+        }
+      }
+      &.current-row {
+        td {
+          background-color: @--tableBodyTrCurrentRowTdBackgroundColor;
+          box-shadow: @--tableBodyTrCurrentRowTdBoxShadow;
+        }
+      }
+    }
+  }
+  .el-table__fixed {
+    height: @--tableFixedHeight;
+    thead:not(.is-group) {
+      tr {
+        th {
+          &:nth-last-child(2) {
+            border-right: @--tableFixedTheadNotGroupTrThNthLast2BorderRight;
+          }
+        }
+      }
+    }
+    tr {
+      th {
+        &:last-child {
+          border-left: @--tableFixedTrThLastBorderLeft;
+        }
+      }
+      td {
+        &:last-child {
+          border-right: @--tableFixedTrTdLastBorderRight;
+        }
+      }
+    }
+  }
+  .el-table__fixed-right {
+    height: @--tableFixedRightHeight;
+    tr {
+      th {
+        &:last-child {
+          border-right: @--tableFixedRightTrThLastBorderRight;
+        }
+      }
+    }
+    .el-table__fixed-body-wrapper {
+      tr {
+        td {
+          &:last-child {
+            border-right: @--tableFixedRightBodyWrapperTrTdLastBorderRight;
+          }
+        }
+      }
+    }
+  }
+  .el-table__body-wrapper {
+    &.is-scrolling-none {
+      & ~ .el-table__fixed {
+        height: @--tableBodyWrapperScrollingNoneFixedHeight;
+        box-shadow: @--tableBodyWrapperScrollingNoneFixedBoxShadow;
+      }
+      & ~ .el-table__fixed-right {
+        height: @--tableBodyWrapperScrollingNoneFixedRightHeight;
+        box-shadow: @--tableBodyWrapperScrollingNoneFixedRightBoxShadow;
+      }
+    }
+    & ~ .el-table__fixed {
+      &::before {
+        height: @--tableBodyWrapperFixedBeforeHeight;
+      }
+    }
+    & ~ .el-table__fixed-right {
+      &::before {
+        height: @--tableBodyWrapperFixedRightBeforeHeight;
+      }
+    }
+    .el-table__empty-block {
+      align-items: flex-start !important;
+      .el-table__empty-text {
+        width: @--tableBodyWrapperEmptyBlockTextWidth;
+      }
+    }
+  }
+  &.has-height {
+    .el-table__fixed-right-patch {
+      top: @--tableHeightFixedRightPatchTop;
+      background: @--tableHeightFixedRightPatchBackground;
+      border-bottom: @--tableHeightFixedRightPatchBorderBottom;
+      box-shadow: @--tableHeightFixedRightPatchBoxShadow;
+    }
+    .el-table__fixed-right {
+      .el-table__fixed-body-wrapper {
+        bottom: @--tableHeightFixedRightBodyWrapperBottom;
+        height: @--tableHeightFixedRightBodyWrapperHeight;
+        max-height: @--tableHeightFixedRightBodyWrapperMaxHeight;
+      }
+    }
+    .el-table__fixed {
+      .el-table__fixed-body-wrapper {
+        bottom: @--tableHeightFixedBodyWrapperBottom;
+        height: @--tableHeightFixedBodyWrapperHeight;
+        max-height: @--tableHeightFixedBodyWrapperMaxHeight;
+      }
+    }
+    &.el-table--scrollable-x {
+      &:not(.el-table--scrollable-y) {
+        .el-table__fixed-right {
+          right: @--tableHeightScrollableXNotYFixedRightRight;
+        }
+      }
+    }
+    &.el-table--scrollable-y {
+      th {
+        &.gutter {
+          &:last-child {
+            border-bottom: @--tableHeightScrollableYThGutterLastBorderBottom;
+          }
+        }
+      }
+    }
+  }
+  .caret-wrapper {
+    .sort-caret {
+      left: @--tableCaretWrapperSortCaretLeft;
+      &.ascending {
+        border-bottom-color: @--tableCaretWrapperSortCaretAscendingBorderBottomColor;
+      }
+      &.descending {
+        border-top-color: @--tableCaretWrapperSortCaretDescendingBorderTopColor;
+      }
+    }
+  }
+  .ascending {
+    .caret-wrapper {
+      .sort-caret {
+        &.ascending {
+          border-bottom-color: @--tableAscendingCaretWrapperSortCaretAscendingBorderBottomColor;
+        }
+      }
+    }
+  }
+  .descending {
+    .caret-wrapper {
+      .sort-caret {
+        &.descending {
+          border-top-color: @--tableDescendingCaretWrapperSortCaretDescendingBorderTopColor;
+        }
+      }
+    }
+  }
+}

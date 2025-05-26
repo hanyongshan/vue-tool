@@ -1,0 +1,98 @@
+// 树形
+.ms-tree {
+  user-select: none !important;
+  .el-tree-node__expand-icon {
+    color: @treeNodeExpandIconColor;
+    &.is-leaf {
+      color: @treeNodeExpandIconLeafColor;
+    }
+  }
+  .el-checkbox {
+    display: flex !important;
+  }
+  .el-checkbox__inner {
+    background: @treeCheckboxInnerBackground;
+    border-color: @treeCheckboxInnerBorderColor;
+    box-shadow: @treeCheckboxInnerBoxShadow;
+    &::after {
+      border-color: @treeCheckboxInnerAfterBorderColor;
+    }
+    &:hover {
+      border-color: @treeCheckboxInnerHoverBorderColor;
+      box-shadow: @treeCheckboxInnerHoverBoxShadow;
+    }
+  }
+  .el-checkbox__input {
+    line-height: @treeCheckboxInputLineHeight;
+    &.is-checked {
+      .el-checkbox__inner {
+        background: @treeCheckboxInputCheckedCheckboxInnerBackground;
+        border-color: @treeCheckboxInputCheckedCheckboxInnerBorderColor;
+        box-shadow: @treeCheckboxInputCheckedCheckboxInnerBoxShadow;
+      }
+    }
+    &.is-indeterminate {
+      .el-checkbox__inner {
+        background: @treeCheckboxInputIndeterminateCheckboxInnerBackground;
+        border-color: @treeCheckboxInputIndeterminateCheckboxInnerBorderColor;
+        box-shadow: @treeCheckboxInputIndeterminateCheckboxInnerBoxShadow;
+        &::before {
+          transform: scale(0.7);
+        }
+      }
+    }
+    &.is-disabled {
+      &.is-checked {
+        .el-checkbox__inner {
+          background: @treeCheckboxInputDisabledCheckedCheckboxInnerBackground;
+          border-color: @treeCheckboxInputDisabledCheckedCheckboxInnerBorderColor;
+          box-shadow: @treeCheckboxInputDisabledCheckedCheckboxInnerBoxShadow;
+          &::after {
+            border-color: @treeCheckboxInputDisabledCheckedAfterBorderColor;
+          }
+        }
+      }
+      &.is-indeterminate {
+        .el-checkbox__inner {
+          background: @treeCheckboxInputDisabledIndeterminateCheckboxInnerBackground;
+          border-color: @treeCheckboxInputDisabledIndeterminateCheckboxInnerBorderColor;
+          box-shadow: @treeCheckboxInputDisabledIndeterminateCheckboxInnerBoxShadow;
+          &::before {
+            background-color: @treeCheckboxInputDisabledIndeterminateBeforeBackgroundColor;
+            border-color: @treeCheckboxInputDisabledIndeterminateBeforeBorderColor;
+          }
+        }
+      }
+      .el-checkbox__inner {
+        background: @treeCheckboxInputDisabledCheckboxInnerBackground;
+        border-color: @treeCheckboxInputDisabledCheckboxInnerBorderColor;
+        box-shadow: @treeCheckboxInputDisabledCheckboxInnerBoxShadow;
+      }
+    }
+  }
+  .el-tree-node__content {
+    & > .el-tree-node__expand-icon {
+      padding: @treeNodeContentExpandIconPadding;
+    }
+    &:hover {
+      background-color: @treeNodeContentHoverBackgroundColor;
+    }
+    & > label {
+      &.el-checkbox {
+        margin-right: @treeNodeContentLabelCheckboxMarginRight;
+      }
+    }
+  }
+  .el-tree-node:focus > .el-tree-node__content {
+    background-color: @treeNodeFocusNodeContentBackgroundColor;
+  }
+  .el-tree-node__label {
+    overflow: hidden !important;
+    font-family: @treeNodeLabelFontFamily;
+    font-size: @treeNodeLabelFontSize;
+    font-weight: @treeNodeLabelFontWeight;
+    color: @treeNodeLabelColor;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+}
