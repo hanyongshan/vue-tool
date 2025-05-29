@@ -22,33 +22,37 @@ export default {
 <style lang="less" scoped></style>
 
 <style lang="less">
-.ms-scrollbar-x .ms-scrollbar-box-x {
-  white-space: nowrap;
+.ms-scrollbar-x {
+  width: 100%;
+  .ms-scrollbar-box-x {
+    width: 100%;
+    white-space: nowrap;
 
-  .el-scrollbar__wrap {
-    margin-right: 0;
-    overflow: scroll;
-  }
+    .el-scrollbar__wrap {
+      margin-right: 0;
+      overflow: scroll;
+    }
 
-  .el-scrollbar__bar.is-horizontal {
-    height: 8px;
-    pointer-events: none;
-  }
+    .el-scrollbar__bar.is-horizontal {
+      height: 8px;
+      pointer-events: none;
+    }
 
-  .el-scrollbar__bar.is-vertical {
-    display: none;
-    pointer-events: none;
-  }
+    .el-scrollbar__bar.is-vertical {
+      display: none;
+      pointer-events: none;
+    }
 
-  .el-scrollbar__thumb {
-    pointer-events: auto;
-    cursor: default;
-    background-color: #979797;
-    border-radius: 3px;
-
-    &:hover,
-    &:active {
+    .el-scrollbar__thumb {
+      pointer-events: auto;
+      cursor: default;
       background-color: #979797;
+      border-radius: 3px;
+
+      &:hover,
+      &:active {
+        background-color: #979797;
+      }
     }
   }
 }
