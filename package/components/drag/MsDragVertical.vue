@@ -1,7 +1,18 @@
 <template>
-  <div class="ms-drag-vertical">
-    <div class="ms-drag-vertical-content" :style="dragVerticalContentStyle"><slot></slot></div>
-    <div class="ms-drag-vertical-drag" @mousedown.stop="dragMousedown">
+  <div
+    class="ms-drag-vertical"
+    ref="verticalRef"
+  >
+    <div
+      class="ms-drag-vertical-content"
+      :style="`height: ${dragVerticalContentHeight !== 0 ? dragVerticalContentHeight + 'px' : ''}`"
+    >
+      <slot></slot>
+    </div>
+    <div
+      class="ms-drag-vertical-drag"
+      @mousedown.stop="dragMousedown"
+    >
       <div>
         <div></div>
         <div></div>
@@ -12,41 +23,59 @@
 </template>
 
 <script>
+// 可拖拉组件用法：
+// innerHeight：设置默认高度，不传则默认自适应
+// innerMinHeight：设置最小高度，可传可不传
+// innerMaxHeight：设置最大高度，可传可不传
+
 export default {
   name: 'MsDragVertical',
   props: {
-    innerHeight: { type: Number, required: false, default: 240 },
-    innerMinHeight: { type: Number, required: false, default: 120 },
-    innerMaxHeight: { type: Number, required: false, default: 360 },
+    innerHeight: { type: Number, required: false, default: 0 },
+    innerMinHeight: { type: Number, required: false, default: 0 },
+    innerMaxHeight: { type: Number, required: false, default: 0 },
   },
   data() {
     return {
       dragVerticalContentHeight: 0,
     };
   },
-  created() {
-    this.dragVerticalContentHeight = this.innerHeight;
+  created() {},
+  mounted() {
+    this.$nextTick(() => {
+      this.dragVerticalContentHeight = this.innerHeight ? this.innerHeight : 0;
+      // 处理初始化内容超出父组件默认给填充高度
+      if (!this.dragVerticalContentHeight && this.getVerticalHeight() >= this.getVerticalParentHeight()) {
+        this.dragVerticalContentHeight = this.getVerticalParentHeight() - 4;
+      }
+    });
   },
-  mounted() {},
-  computed: {
-    dragVerticalContentStyle() {
-      return `height: ${this.dragVerticalContentHeight}px;`;
-    },
-  },
+  computed: {},
   methods: {
     dragMousedown(event) {
       let mousedownY = event.clientY;
       document.onmousemove = event => {
         const mousemoveY = event.clientY;
         if (mousemoveY > mousedownY) {
-          if (this.dragVerticalContentHeight >= this.innerMaxHeight) {
+          // 有最大高度时候判断
+          if (this.innerMaxHeight !== 0 && this.dragVerticalContentHeight >= this.innerMaxHeight) {
             this.dragVerticalContentHeight = this.innerMaxHeight;
+            return;
+          }
+          // 无最大高度时候判断，拖拽超出父元素高度，将高度变为填充满高度
+          if (this.getVerticalHeight() >= this.getVerticalParentHeight()) {
+            this.dragVerticalContentHeight = this.getVerticalParentHeight() - 4;
             return;
           }
           this.dragVerticalContentHeight += mousemoveY - mousedownY;
         } else {
-          if (this.dragVerticalContentHeight <= this.innerMinHeight) {
+          if (this.innerMinHeight !== 0 && this.dragVerticalContentHeight <= this.innerMinHeight) {
             this.dragVerticalContentHeight = this.innerMinHeight;
+            return;
+          }
+
+          if (this.getVerticalHeight() <= 4) {
+            this.dragVerticalContentHeight = 0;
             return;
           }
           this.dragVerticalContentHeight -= mousedownY - mousemoveY;
@@ -60,12 +89,21 @@ export default {
       event.stopPropagation();
       event.preventDefault();
     },
+    //获取组件元素的高
+    getVerticalHeight() {
+      return this.$refs.verticalRef && this.$refs.verticalRef.clientHeight;
+    },
+    //获取上级元素的高
+    getVerticalParentHeight() {
+      return this.$refs.verticalRef.parentNode && this.$refs.verticalRef.parentNode.clientHeight;
+    },
   },
 };
 </script>
 
 <style lang="less" scoped>
 .ms-drag-vertical {
+  width: 100%;
   &-content {
     overflow: auto;
   }

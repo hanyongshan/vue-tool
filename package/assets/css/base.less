@@ -1,3 +1,6 @@
+@import './skin/index.less';
+@import './style/index.less';
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -16,33 +19,42 @@ body,
   font-family: 'Harmony Regular', 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif !important;
   font-size: 14px;
 }
+
 body {
   overflow: hidden !important;
 }
+
 [v-cloak] {
   display: none;
 }
+
 ::-ms-reveal {
   display: none;
 }
+
 img {
   border: none;
 }
+
 :focus {
   outline: none;
 }
+
 ul,
 li {
   list-style-type: none;
 }
+
 button {
   cursor: pointer;
 }
+
 i,
 em,
 cite {
   font-style: normal;
 }
+
 a,
 a:link,
 a:active,
@@ -50,41 +62,49 @@ a:hover,
 a:focus {
   text-decoration: none;
 }
+
 input {
   padding: 1px;
   font: inherit;
   line-height: normal;
 }
+
 textarea {
   font: inherit;
 }
+
 .BMap_cpyCtrl {
   display: none;
 }
+
 .anchorBL {
   display: none;
 }
+
 ::-webkit-scrollbar {
   width: 14px !important;
   height: 8px !important;
   background: transparent !important;
 }
+
 ::-webkit-scrollbar-thumb:vertical {
   background: linear-gradient(to right, transparent 0%, transparent 22%, #979797 0, #979797 78%, transparent 0, transparent 100%) !important;
   border-radius: 7px !important;
 }
+
 ::-webkit-scrollbar-thumb:vertical:hover {
   background: linear-gradient(to right, transparent 0%, transparent 22%, #979797 0, #979797 78%, transparent 0, transparent 100%) !important;
 }
+
 ::-webkit-scrollbar-thumb:horizontal {
   background: #979797 !important;
   border-radius: 3px !important;
 }
+
 ::-webkit-scrollbar-thumb:horizontal:hover {
   background: #979797 !important;
 }
+
 .vue-recycle-scroller.ready .vue-recycle-scroller__item-view {
   will-change: auto !important;
 }
-@import './skin/index.less';
-@import './style/index.less';
