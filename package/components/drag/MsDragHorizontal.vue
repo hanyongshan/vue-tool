@@ -1,18 +1,9 @@
 <template>
-  <div
-    class="ms-drag-horizontal"
-    ref="horizontalRef"
-  >
-    <div
-      class="ms-drag-horizontal-content"
-      :style="`width: ${dragHorizontalContentWidth ? dragHorizontalContentWidth + 'px' :''}`"
-    >
+  <div class="ms-drag-horizontal" ref="horizontalRef">
+    <div class="ms-drag-horizontal-content" :style="`width: ${dragHorizontalContentWidth ? dragHorizontalContentWidth + 'px' : ''}`">
       <slot></slot>
     </div>
-    <div
-      class="ms-drag-horizontal-drag"
-      @mousedown.stop="dragMousedown"
-    >
+    <div class="ms-drag-horizontal-drag" @mousedown.stop="dragMousedown">
       <div>
         <div></div>
         <div></div>
@@ -69,8 +60,8 @@ export default {
             return;
           }
 
-          if (this.getHorizontalWidth() <= 4) {
-            this.dragHorizontalContentWidth = 0;
+          if (this.dragHorizontalContentWidth <= 0) {
+            this.dragHorizontalContentWidth = 0.1;
             return;
           }
           this.dragHorizontalContentWidth -= mousedownX - mousemoveX;

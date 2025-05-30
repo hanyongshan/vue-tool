@@ -1,18 +1,9 @@
 <template>
-  <div
-    class="ms-drag-vertical"
-    ref="verticalRef"
-  >
-    <div
-      class="ms-drag-vertical-content"
-      :style="`height: ${dragVerticalContentHeight !== 0 ? dragVerticalContentHeight + 'px' : ''}`"
-    >
+  <div class="ms-drag-vertical" ref="verticalRef">
+    <div class="ms-drag-vertical-content" :style="`height: ${dragVerticalContentHeight !== 0 ? dragVerticalContentHeight + 'px' : 'auto'}`">
       <slot></slot>
     </div>
-    <div
-      class="ms-drag-vertical-drag"
-      @mousedown.stop="dragMousedown"
-    >
+    <div class="ms-drag-vertical-drag" @mousedown.stop="dragMousedown">
       <div>
         <div></div>
         <div></div>
@@ -43,7 +34,7 @@ export default {
   created() {},
   mounted() {
     this.$nextTick(() => {
-      this.dragVerticalContentHeight = this.innerHeight ? this.innerHeight : 0;
+      this.dragVerticalContentHeight = this.innerHeight;
       // 处理初始化内容超出父组件默认给填充高度
       if (!this.dragVerticalContentHeight && this.getVerticalHeight() >= this.getVerticalParentHeight()) {
         this.dragVerticalContentHeight = this.getVerticalParentHeight() - 4;
@@ -73,9 +64,9 @@ export default {
             this.dragVerticalContentHeight = this.innerMinHeight;
             return;
           }
-
-          if (this.getVerticalHeight() <= 4) {
-            this.dragVerticalContentHeight = 0;
+          // 缩小高度时候设置能缩小最小高度为0.1，不能为0，如果子元素本身高度高于父元素，为0时候会自适应高度
+          if (this.dragVerticalContentHeight <= 0) {
+            this.dragVerticalContentHeight = 0.1;
             return;
           }
           this.dragVerticalContentHeight -= mousedownY - mousemoveY;
