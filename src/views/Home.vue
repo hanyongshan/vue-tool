@@ -5,6 +5,7 @@
     <div @click="go('/input')">输入框/单选/多选/下拉选</div>
     <div @click="go('/select')">下拉组件</div>
     <div @click="go('/drag')">区域可拖动组件</div>
+    <div @click="go('/scrollbar')">滚动条组件</div>
   </div>
 </template>
 

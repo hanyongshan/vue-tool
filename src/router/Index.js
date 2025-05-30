@@ -11,6 +11,7 @@ const DatePick = () => import('@/views/assembly/DatePick.vue');
 const InputIndex = () => import('@/views/assembly/Input.vue');
 const SelectIndex = () => import('@/views/assembly/Select.vue');
 const DragIndex = () => import('@/views/assembly/Drag.vue');
+const ScrollbarIndex = () => import('@/views/assembly/Scrollbar.vue');
 
 // 3. 定义路由规则
 const routes = [
@@ -43,6 +44,11 @@ const routes = [
     path: '/drag',
     name: 'DragIndex',
     component: DragIndex,
+  },
+  {
+    path: '/scrollbar',
+    name: 'ScrollbarIndex',
+    component: ScrollbarIndex,
   },
 ];
 

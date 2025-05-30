@@ -39,6 +39,7 @@ export default {
         }
       });
     },
+    // 获取滚动距离
     getTop() {
       return this.top;
     },
@@ -49,8 +50,7 @@ export default {
 <style lang="less" scoped>
 .ms-scrollbar-y {
   height: 100%;
-
-  .ms-scrollbar-box-y {
+  /deep/ .ms-scrollbar-box-y {
     height: 100%;
     .el-scrollbar__wrap {
       height: 100%;
@@ -62,6 +62,7 @@ export default {
       z-index: 99;
       width: 8px;
       pointer-events: none;
+      right: 1px;
     }
     .el-scrollbar__bar.is-horizontal {
       display: none;
