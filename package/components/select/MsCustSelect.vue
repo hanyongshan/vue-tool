@@ -1,39 +1,12 @@
-<!--  -->
+<!-- 触发组件为input框 -->
 <template>
-  <el-popover
-    class="ms-popover-select"
-    popper-class="ms-popover"
-    ref="popoverRef"
-    placement="bottom"
-    v-model="visible"
-    trigger="click"
-    :disabled="disabled"
-    :popper-options="boundaries"
-  >
+  <el-popover class="ms-popover-select" popper-class="ms-popover" ref="popoverRef" placement="bottom" v-model="visible" trigger="click" :disabled="disabled" :popper-options="boundaries">
     <div :style="`width:${width}px`">
       <!-- 自定义需要展示的选项内容-->
-      <div
-        class="select-item"
-        v-for="(item,idx) in selectOptions"
-        :key="idx"
-        @click="eventSelect(item)"
-      >{{item.label}}</div>
+      <div class="select-item" v-for="(item, idx) in selectOptions" :key="idx" @click="eventSelect(item)">{{ item.label }}</div>
     </div>
-    <el-input
-      class="ms-input"
-      slot="reference"
-      :style="`width:${width}px`"
-      v-model="selectValue"
-      placeholder="请选择"
-      :disabled="disabled"
-      readonly
-      :clearable="clearable"
-    >
-      <i
-        slot="suffix"
-        :class="`select-icon el-icon-arrow-up ${visible ? 'is-reverse' :''} ${!disabled && selectValue  && clearable ? 'is-clearable':''}`"
-        @click="eventclear"
-      ></i>
+    <el-input class="ms-input" slot="reference" :style="`width:${width}px`" v-model="selectValue" placeholder="请选择" :disabled="disabled" readonly :clearable="clearable">
+      <i slot="suffix" :class="`select-icon el-icon-arrow-up ${visible ? 'is-reverse' : ''} ${!disabled && selectValue && clearable ? 'is-clearable' : ''}`" @click="eventclear"></i>
     </el-input>
   </el-popover>
 </template>
@@ -137,7 +110,7 @@ export default {
   activated() {}, // 如果页面有keep-alive缓存功能，这个函数会触发
 };
 </script>
-<style lang='less' scoped>
+<style lang="less" scoped>
 .select-icon {
   transition: all 0.5s;
 }

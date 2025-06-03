@@ -14,11 +14,17 @@ import MsTool from './utils/tool.js';
 
 export { MsValidate, MsTool };
 
+// 引入第三方工具插件(部分引入)，第三方插件样式不用再工具包中引入，直接在项目入口main.js中引入即可
+import { RecycleScroller } from 'vue-virtual-scroller';
+
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = function (vue) {
   Object.keys(componentsObj).forEach(name => {
     vue.component(name, componentsObj[name]);
   });
+  // 将第三方插件工具注册为全局组件
+  vue.component('RecycleScroller', RecycleScroller);
+
   vue.prototype.$msValidate = MsValidate;
   vue.prototype.$msSystem = MsTool;
 };
