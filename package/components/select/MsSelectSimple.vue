@@ -1,5 +1,5 @@
 <template>
-  <el-select class="ms-select" :style="selectStyle" popper-class="ms-select-popper" v-model="selectValue" @visible-change="selectVisibleChange" @change="simpleCodeChange" :filter-method="simpleCodeFilterMethod" placeholder="请选择" :clearable="clearable" :disabled="disabled" filterable>
+  <el-select class="ms-select" :style="selectStyle" popper-class="ms-select-popper" v-model="selectValue" @visible-change="selectVisibleChange" @change="simpleCodeChange" :filter-method="simpleCodeFilterMethod" placeholder="请选择" :clearable="clearable" :disabled="disabled" filterable :collapse-tags="false">
     <recycle-scroller pageMode :items="showSimpleCodeList" key-field="rid" :item-size="28" :buffer="2000" v-slot="{ item, active }">
       <el-option :key="item.codeNo" :label="item.codeName" :value="item.codeNo"></el-option>
     </recycle-scroller>
@@ -64,7 +64,7 @@ export default {
       {
         rid: 103,
         codeNo: '103',
-        codeName: '我是103',
+        codeName: '我是103我是103我是103我是103我是103我是103',
       },
       {
         rid: 104,

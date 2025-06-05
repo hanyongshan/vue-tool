@@ -10,6 +10,10 @@
     <div class="content">
       <ms-select-simple ref="selectSimple" v-model="defaultValue" @eventSimpleCodeChange="eventSimpleCodeChange"></ms-select-simple>
     </div>
+    <div class="tip">简单单选下拉多选组件（el-select + recycle-scroller）,用于处理滚动项很多卡顿问题</div>
+    <div class="content">
+      <ms-select-simple-multiple ref="selectSimpleMultiple"></ms-select-simple-multiple>
+    </div>
   </div>
 </template>
 
