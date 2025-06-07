@@ -129,8 +129,7 @@ export default {
     simpleCodeFilterMethod(query) {
       this.showSimpleCodeList.splice(0, this.showSimpleCodeList.length);
       for (let i = 0, length = this.simpleCodeList.length; i < length; i++) {
-        const pyxName = this.$msBases.pyCamelChars(this.simpleCodeList[i].codeName);
-        if (query === undefined || query === null || query === '' || this.simpleCodeList[i].codeName.indexOf(query) !== -1 || pyxName.toUpperCase().indexOf(query.toUpperCase()) !== -1) this.showSimpleCodeList.push(this.simpleCodeList[i]);
+        if (query === undefined || query === null || query === '' || this.simpleCodeList[i].codeName.indexOf(query) !== -1) this.showSimpleCodeList.push(this.simpleCodeList[i]);
       }
       this.$forceUpdate();
     },
