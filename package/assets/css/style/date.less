@@ -1,61 +1,72 @@
 // 日期选择器
 .ms-date-picker {
-  width: @datePickerWidth;
-  height: @datePickerHeight;
+  width: @datePickerWidth  !important;
+  height: @datePickerHeight  !important;
+
   .el-input__inner {
-    height: @datePickerInputInnerHeight;
-    padding: @datePickerInputInnerPadding;
-    font-family: @datePickerInputInnerFontFamily;
-    font-size: @datePickerInputInnerFontSize;
-    font-weight: @datePickerInputInnerFontWeight;
-    line-height: @datePickerInputInnerLineHeight;
-    color: @datePickerInputInnerColor;
-    background: @datePickerInputInnerBackground;
-    border: @datePickerInputInnerBorder;
-    border-radius: @datePickerInputInnerBorderRadius;
+    height: @datePickerInputInnerHeight  !important;
+    padding: @datePickerInputInnerPadding  !important;
+    font-family: @datePickerInputInnerFontFamily  !important;
+    font-size: @datePickerInputInnerFontSize  !important;
+    font-weight: @datePickerInputInnerFontWeight  !important;
+    line-height: @datePickerInputInnerLineHeight  !important;
+    color: @datePickerInputInnerColor  !important;
+    background: @datePickerInputInnerBackground  !important;
+    border: @datePickerInputInnerBorder  !important;
+    border-radius: @datePickerInputInnerBorderRadius  !important;
+
     &:hover {
-      border-color: @datePickerInputInnerHoverBorderColor;
+      border-color: @datePickerInputInnerHoverBorderColor  !important;
     }
+
     &:focus {
-      border-color: @datePickerInputInnerFocusBorderColor;
-      outline: none;
-      box-shadow: @datePickerInputInnerFocusBoxShadow;
+      border-color: @datePickerInputInnerFocusBorderColor  !important;
+      outline: none !important;
+      box-shadow: @datePickerInputInnerFocusBoxShadow  !important;
     }
   }
+
   &.is-disabled {
     .el-input__inner {
-      background: @datePickerDisabledInputInnerBackground;
-      border: @datePickerDisabledInputInnerBorder;
+      background: @datePickerDisabledInputInnerBackground  !important;
+      border: @datePickerDisabledInputInnerBorder  !important;
     }
   }
+
   input::input-placeholder {
-    color: @datePickerInputPlaceholderColor;
+    color: @datePickerInputPlaceholderColor  !important;
   }
+
   .el-input__prefix {
-    left: @datePickerInputPrefixLeft;
-    width: @datePickerInputPrefixWidth;
-    height: @datePickerInputPrefixHeight;
+    left: @datePickerInputPrefixLeft  !important;
+    width: @datePickerInputPrefixWidth  !important;
+    height: @datePickerInputPrefixHeight  !important;
+
     .el-icon-date,
     .el-icon-time {
-      line-height: @datePickerInputPrefixDateTimeLineHeight;
+      line-height: @datePickerInputPrefixDateTimeLineHeight  !important;
+
       &::before {
-        font-size: @datePickerInputPrefixDateTimeBeforeFontSize;
-        color: @datePickerInputPrefixDateTimeBeforeColor;
-        content: '\e78e';
+        font-size: @datePickerInputPrefixDateTimeBeforeFontSize  !important;
+        color: @datePickerInputPrefixDateTimeBeforeColor  !important;
+        content: '\e78e' !important;
       }
     }
   }
+
   .el-input__suffix {
-    right: @datePickerInputSuffixRight;
-    width: @datePickerInputSuffixWidth;
-    height: @datePickerInputSuffixHeight;
+    right: @datePickerInputSuffixRight  !important;
+    width: @datePickerInputSuffixWidth  !important;
+    height: @datePickerInputSuffixHeight  !important;
+
     .el-icon-circle-close {
-      line-height: @datePickerInputSuffixIconCircleCloseLineHeight;
-      transition: none;
+      line-height: @datePickerInputSuffixIconCircleCloseLineHeight  !important;
+      transition: none !important;
+
       &::before {
-        font-size: @datePickerInputSuffixIconCircleCloseBeforeFontSize;
-        color: @datePickerInputSuffixIconCircleCloseBeforeColor;
-        content: '';
+        font-size: @datePickerInputSuffixIconCircleCloseBeforeFontSize  !important;
+        color: @datePickerInputSuffixIconCircleCloseBeforeColor  !important;
+        content: '' !important;
       }
     }
   }
@@ -63,271 +74,321 @@
 
 // 日期选择器-菜单
 .ms-date-picker-popper {
-  width: @datePickerPopperWidth;
-  min-height: @datePickerPopperMinHeight;
-  background: @datePickerPopperBackground;
-  border: @datePickerPopperBorder;
-  box-shadow: @datePickerPopperBoxShadow;
+  width: @datePickerPopperWidth  !important;
+  min-height: @datePickerPopperMinHeight  !important;
+  background: @datePickerPopperBackground  !important;
+  border: @datePickerPopperBorder  !important;
+  box-shadow: @datePickerPopperBoxShadow  !important;
+
   &.el-popper[x-placement^='bottom'] {
-    margin-top: @datePickerPopperBottomMarginTop;
-    margin-bottom: @datePickerPopperBottomMarginBottom;
+    margin-top: @datePickerPopperBottomMarginTop  !important;
+    margin-bottom: @datePickerPopperBottomMarginBottom  !important;
   }
+
   &.el-popper[x-placement^='top'] {
-    margin-top: @datePickerPopperTopMarginTop;
-    margin-bottom: @datePickerPopperTopMarginBottom;
+    margin-top: @datePickerPopperTopMarginTop  !important;
+    margin-bottom: @datePickerPopperTopMarginBottom  !important;
   }
+
   .popper__arrow {
-    border-width: @datePickerPopperArrowBorderWidth;
+    border-width: @datePickerPopperArrowBorderWidth  !important;
+
     &::after {
-      border-width: @datePickerPopperArrowAfterBorderWidth;
+      border-width: @datePickerPopperArrowAfterBorderWidth  !important;
     }
   }
+
   &.has-sidebar {
-    width: @datePickerPopperSidebarWidth;
+    width: @datePickerPopperSidebarWidth  !important;
   }
+
   .el-picker-panel__sidebar {
-    width: @datePickerPopperPanelSidebarWidth;
-    border-color: @datePickerPopperPanelSidebarBorderColor;
+    width: @datePickerPopperPanelSidebarWidth  !important;
+    border-color: @datePickerPopperPanelSidebarBorderColor  !important;
+
     .el-picker-panel__shortcut {
-      font-family: @datePickerPopperPanelSidebarShortcutFontFamily;
-      font-size: @datePickerPopperPanelSidebarShortcutFontSize;
-      font-weight: @datePickerPopperPanelSidebarShortcutFontWeight;
-      color: @datePickerPopperPanelSidebarShortcutColor;
+      font-family: @datePickerPopperPanelSidebarShortcutFontFamily  !important;
+      font-size: @datePickerPopperPanelSidebarShortcutFontSize  !important;
+      font-weight: @datePickerPopperPanelSidebarShortcutFontWeight  !important;
+      color: @datePickerPopperPanelSidebarShortcutColor  !important;
+
       &:hover {
-        color: @datePickerPopperPanelSidebarShortcutHoverColor;
+        color: @datePickerPopperPanelSidebarShortcutHoverColor  !important;
       }
     }
   }
-  .el-picker-panel [slot='sidebar'] + .el-picker-panel__body,
-  .el-picker-panel__sidebar + .el-picker-panel__body {
-    margin-left: @datePickerPopperPanelSidebarBodyMarginLeft;
+
+  .el-picker-panel [slot='sidebar']+.el-picker-panel__body,
+  .el-picker-panel__sidebar+.el-picker-panel__body {
+    margin-left: @datePickerPopperPanelSidebarBodyMarginLeft  !important;
   }
+
   .el-date-picker__header {
-    height: @datePickerPopperHeaderHeight;
-    margin: @datePickerPopperHeaderMargin;
+    height: @datePickerPopperHeaderHeight  !important;
+    margin: @datePickerPopperHeaderMargin  !important;
+
     .el-picker-panel__icon-btn {
-      margin-top: @datePickerPopperHeaderPanelIconBtnMarginTop;
-      color: @datePickerPopperHeaderPanelIconBtnColor;
+      margin-top: @datePickerPopperHeaderPanelIconBtnMarginTop  !important;
+      color: @datePickerPopperHeaderPanelIconBtnColor  !important;
     }
+
     .el-date-picker__header-label {
-      padding: @datePickerPopperHeaderLabelPadding;
-      font-family: @datePickerPopperHeaderLabelFontFamily;
-      font-size: @datePickerPopperHeaderLabelFontSize;
-      font-weight: @datePickerPopperHeaderLabelFontWeight;
-      color: @datePickerPopperHeaderLabelColor;
+      padding: @datePickerPopperHeaderLabelPadding  !important;
+      font-family: @datePickerPopperHeaderLabelFontFamily  !important;
+      font-size: @datePickerPopperHeaderLabelFontSize  !important;
+      font-weight: @datePickerPopperHeaderLabelFontWeight  !important;
+      color: @datePickerPopperHeaderLabelColor  !important;
     }
   }
+
   .el-picker-panel__content {
-    width: @datePickerPopperPanelContentWidth;
-    padding: @datePickerPopperPanelContentPadding;
-    margin: @datePickerPopperPanelContentMargin;
+    width: @datePickerPopperPanelContentWidth  !important;
+    padding: @datePickerPopperPanelContentPadding  !important;
+    margin: @datePickerPopperPanelContentMargin  !important;
   }
+
   .el-date-table {
-    font-family: @datePickerPopperDateTableFontFamily;
-    font-size: @datePickerPopperDateTableFontSize;
-    font-weight: @datePickerPopperDateTableFontWeight;
+    font-family: @datePickerPopperDateTableFontFamily  !important;
+    font-size: @datePickerPopperDateTableFontSize  !important;
+    font-weight: @datePickerPopperDateTableFontWeight  !important;
+
     th {
-      height: @datePickerPopperDateTableThHeight;
-      padding: @datePickerPopperDateTableThPadding;
-      border-color: @datePickerPopperDateTableThBorderColor;
+      height: @datePickerPopperDateTableThHeight  !important;
+      padding: @datePickerPopperDateTableThPadding  !important;
+      border-color: @datePickerPopperDateTableThBorderColor  !important;
     }
+
     td {
-      padding: @datePickerPopperDateTableTdPadding;
-      cursor: pointer;
+      padding: @datePickerPopperDateTableTdPadding  !important;
+      cursor: pointer !important;
+
       div {
-        width: @datePickerPopperDateTableTdDivWidth;
-        height: @datePickerPopperDateTableTdDivHeight;
-        padding: @datePickerPopperDateTableTdDivPadding;
-        margin: @datePickerPopperDateTableTdDivMargin;
+        width: @datePickerPopperDateTableTdDivWidth  !important;
+        height: @datePickerPopperDateTableTdDivHeight  !important;
+        padding: @datePickerPopperDateTableTdDivPadding  !important;
+        margin: @datePickerPopperDateTableTdDivMargin  !important;
+
         span {
-          width: @datePickerPopperDateTableTdDivSpanWidth;
-          height: @datePickerPopperDateTableTdDivSpanHeight;
-          margin-top: @datePickerPopperDateTableTdDivSpanMarginTop;
-          line-height: @datePickerPopperDateTableTdDivSpanLineHeight;
+          width: @datePickerPopperDateTableTdDivSpanWidth  !important;
+          height: @datePickerPopperDateTableTdDivSpanHeight  !important;
+          margin-top: @datePickerPopperDateTableTdDivSpanMarginTop  !important;
+          line-height: @datePickerPopperDateTableTdDivSpanLineHeight  !important;
         }
       }
+
       span {
-        cursor: pointer;
+        cursor: pointer !important;
       }
+
       &.disabled {
-        cursor: not-allowed;
+        cursor: not-allowed !important;
+
         span {
-          cursor: not-allowed;
+          cursor: not-allowed !important;
         }
       }
+
       &.available:not(.today) {
         span {
-          font-weight: @datePickerPopperDateTableTdNotTodaySpanFontWeight;
-          border-radius: @datePickerPopperDateTableTdNotTodaySpanBorderRadius;
+          font-weight: @datePickerPopperDateTableTdNotTodaySpanFontWeight  !important;
+          border-radius: @datePickerPopperDateTableTdNotTodaySpanBorderRadius  !important;
         }
+
         &:hover {
           span {
-            color: @datePickerPopperDateTableTdNotTodayHoverSpanColor;
-            background: @datePickerPopperDateTableTdNotTodayHoverSpanBackground;
-            border-radius: @datePickerPopperDateTableTdNotTodayHoverSpanBorderRadius;
-            box-shadow: @datePickerPopperDateTableTdNotTodayHoverSpanBoxShadow;
+            color: @datePickerPopperDateTableTdNotTodayHoverSpanColor  !important;
+            background: @datePickerPopperDateTableTdNotTodayHoverSpanBackground  !important;
+            border-radius: @datePickerPopperDateTableTdNotTodayHoverSpanBorderRadius  !important;
+            box-shadow: @datePickerPopperDateTableTdNotTodayHoverSpanBoxShadow  !important;
           }
         }
       }
+
       &.today:not(.current) {
         span {
-          font-weight: @datePickerPopperDateTableTdTodayNotCurrentSpanFontWeight;
-          color: @datePickerPopperDateTableTdTodayNotCurrentSpanColor;
-          border-radius: @datePickerPopperDateTableTdTodayNotCurrentSpanBorderRadius;
+          font-weight: @datePickerPopperDateTableTdTodayNotCurrentSpanFontWeight  !important;
+          color: @datePickerPopperDateTableTdTodayNotCurrentSpanColor  !important;
+          border-radius: @datePickerPopperDateTableTdTodayNotCurrentSpanBorderRadius  !important;
         }
+
         &:not(.disabled):hover {
           span {
-            color: @datePickerPopperDateTableTdTodayNotCurrentNotDisabledHoverSpanColor;
-            background: @datePickerPopperDateTableTdTodayNotCurrentNotDisabledHoverSpanBackground;
-            border-radius: @datePickerPopperDateTableTdTodayNotCurrentNotDisabledHoverSpanBorderRadius;
-            box-shadow: @datePickerPopperDateTableTdTodayNotCurrentNotDisabledHoverSpanBoxShadow;
+            color: @datePickerPopperDateTableTdTodayNotCurrentNotDisabledHoverSpanColor  !important;
+            background: @datePickerPopperDateTableTdTodayNotCurrentNotDisabledHoverSpanBackground  !important;
+            border-radius: @datePickerPopperDateTableTdTodayNotCurrentNotDisabledHoverSpanBorderRadius  !important;
+            box-shadow: @datePickerPopperDateTableTdTodayNotCurrentNotDisabledHoverSpanBoxShadow  !important;
           }
         }
       }
+
       &.current {
         span {
-          color: @datePickerPopperDateTableTdCurrentSpanColor;
-          background: @datePickerPopperDateTableTdCurrentSpanBackground;
-          border-radius: @datePickerPopperDateTableTdCurrentSpanBorderRadius;
-          box-shadow: @datePickerPopperDateTableTdCurrentSpanBoxShadow;
+          color: @datePickerPopperDateTableTdCurrentSpanColor  !important;
+          background: @datePickerPopperDateTableTdCurrentSpanBackground  !important;
+          border-radius: @datePickerPopperDateTableTdCurrentSpanBorderRadius  !important;
+          box-shadow: @datePickerPopperDateTableTdCurrentSpanBoxShadow  !important;
         }
       }
     }
   }
+
   .el-year-table {
-    font-family: @datePickerPopperYearTableFontFamily;
-    font-size: @datePickerPopperYearTableFontSize;
-    font-weight: @datePickerPopperYearTableFontWeight;
+    font-family: @datePickerPopperYearTableFontFamily  !important;
+    font-size: @datePickerPopperYearTableFontSize  !important;
+    font-weight: @datePickerPopperYearTableFontWeight  !important;
+
     td {
-      padding: @datePickerPopperYearTableTdPadding;
-      cursor: default;
+      padding: @datePickerPopperYearTableTdPadding  !important;
+      cursor: default !important;
+
       .cell {
-        width: @datePickerPopperYearTableTdCellWidth;
-        height: @datePickerPopperYearTableTdCellHeight;
-        margin: @datePickerPopperYearTableTdCellMargin;
-        line-height: @datePickerPopperYearTableTdCellLineHeight;
-        cursor: pointer;
+        width: @datePickerPopperYearTableTdCellWidth  !important;
+        height: @datePickerPopperYearTableTdCellHeight  !important;
+        margin: @datePickerPopperYearTableTdCellMargin  !important;
+        line-height: @datePickerPopperYearTableTdCellLineHeight  !important;
+        cursor: pointer !important;
       }
+
       &.disabled {
-        cursor: default;
+        cursor: default !important;
+
         .cell {
-          cursor: not-allowed;
-          background: @datePickerPopperYearTableTdDisabledCellBackground;
+          cursor: not-allowed !important;
+          background: @datePickerPopperYearTableTdDisabledCellBackground  !important;
         }
       }
+
       &.today {
         .cell {
-          font-weight: @datePickerPopperYearTableTdTodayCellFontWeight;
-          color: @datePickerPopperYearTableTdTodayCellColor;
+          font-weight: @datePickerPopperYearTableTdTodayCellFontWeight  !important;
+          color: @datePickerPopperYearTableTdTodayCellColor  !important;
         }
       }
     }
+
     td:not(.disabled) {
       .cell {
         &:hover {
-          color: @datePickerPopperYearTableTdNotDisabledCellHoverColor;
+          color: @datePickerPopperYearTableTdNotDisabledCellHoverColor  !important;
         }
       }
     }
   }
+
   .el-month-table {
-    font-family: @datePickerPopperMonthTableFontFamily;
-    font-size: @datePickerPopperMonthTableFontSize;
-    font-weight: @datePickerPopperMonthTableFontWeight;
+    font-family: @datePickerPopperMonthTableFontFamily  !important;
+    font-size: @datePickerPopperMonthTableFontSize  !important;
+    font-weight: @datePickerPopperMonthTableFontWeight  !important;
+
     td {
-      padding: @datePickerPopperMonthTableTdPadding;
-      cursor: pointer;
+      padding: @datePickerPopperMonthTableTdPadding  !important;
+      cursor: pointer !important;
+
       div {
-        width: @datePickerPopperMonthTableTdDivWidth;
-        height: @datePickerPopperMonthTableTdDivHeight;
-        padding: @datePickerPopperMonthTableTdDivPadding;
-        margin: @datePickerPopperMonthTableTdDivMargin;
-        line-height: @datePickerPopperMonthTableTdDivLineHeight;
-        cursor: pointer;
+        width: @datePickerPopperMonthTableTdDivWidth  !important;
+        height: @datePickerPopperMonthTableTdDivHeight  !important;
+        padding: @datePickerPopperMonthTableTdDivPadding  !important;
+        margin: @datePickerPopperMonthTableTdDivMargin  !important;
+        line-height: @datePickerPopperMonthTableTdDivLineHeight  !important;
+        cursor: pointer !important;
       }
+
       .cell {
-        width: @datePickerPopperMonthTableTdCellWidth;
-        height: @datePickerPopperMonthTableTdCellHeight;
-        line-height: @datePickerPopperMonthTableTdCellLineHeight;
+        width: @datePickerPopperMonthTableTdCellWidth  !important;
+        height: @datePickerPopperMonthTableTdCellHeight  !important;
+        line-height: @datePickerPopperMonthTableTdCellLineHeight  !important;
       }
+
       &.disabled {
-        cursor: not-allowed;
+        cursor: not-allowed !important;
+
         .cell {
-          cursor: not-allowed;
-          background: @datePickerPopperMonthTableTdDisabledCellBackground;
+          cursor: not-allowed !important;
+          background: @datePickerPopperMonthTableTdDisabledCellBackground  !important;
         }
       }
+
       &.today {
         .cell {
-          font-weight: @datePickerPopperMonthTableTdTodayCellFontWeight;
-          color: @datePickerPopperMonthTableTdTodayCellColor;
+          font-weight: @datePickerPopperMonthTableTdTodayCellFontWeight  !important;
+          color: @datePickerPopperMonthTableTdTodayCellColor  !important;
         }
       }
     }
+
     td:not(.disabled) {
       &:hover {
         .cell {
-          color: @datePickerPopperMonthTableTdNotDisabledHoverCellColor;
+          color: @datePickerPopperMonthTableTdNotDisabledHoverCellColor  !important;
         }
       }
     }
   }
+
   .el-button--text,
   .el-time-panel__btn.confirm {
-    font-family: @datePickerPopperPanelBtnConfirmFontFamily;
-    font-weight: @datePickerPopperPanelBtnConfirmFontWeight;
-    line-height: @datePickerPopperPanelBtnConfirmLineHeight;
-    color: @datePickerPopperPanelBtnConfirmColor;
-    transition: none;
+    font-family: @datePickerPopperPanelBtnConfirmFontFamily  !important;
+    font-weight: @datePickerPopperPanelBtnConfirmFontWeight  !important;
+    line-height: @datePickerPopperPanelBtnConfirmLineHeight  !important;
+    color: @datePickerPopperPanelBtnConfirmColor  !important;
+    transition: none !important;
   }
+
   .el-time-panel__btn.cancel {
-    font-family: @datePickerPopperPanelBtnCancelFontFamily;
-    font-weight: @datePickerPopperPanelBtnCancelFontWeight;
-    line-height: @datePickerPopperPanelBtnCancelLineHeight;
-    color: @datePickerPopperPanelBtnCancelColor;
-    transition: none;
+    font-family: @datePickerPopperPanelBtnCancelFontFamily  !important;
+    font-weight: @datePickerPopperPanelBtnCancelFontWeight  !important;
+    line-height: @datePickerPopperPanelBtnCancelLineHeight  !important;
+    color: @datePickerPopperPanelBtnCancelColor  !important;
+    transition: none !important;
   }
+
   .el-button--default {
-    height: @datePickerPopperButtonDefaultHeight;
-    padding: @datePickerPopperButtonDefaultPadding;
-    font-family: @datePickerPopperButtonDefaultFontFamily;
-    font-weight: @datePickerPopperButtonDefaultFontWeight;
-    line-height: @datePickerPopperButtonDefaultLineHeight;
-    color: @datePickerPopperButtonDefaultColor;
-    background: @datePickerPopperButtonDefaultBackground;
-    border: @datePickerPopperButtonDefaultBorder;
-    border-radius: @datePickerPopperButtonDefaultBorderRadius;
-    transition: none;
+    height: @datePickerPopperButtonDefaultHeight  !important;
+    padding: @datePickerPopperButtonDefaultPadding  !important;
+    font-family: @datePickerPopperButtonDefaultFontFamily  !important;
+    font-weight: @datePickerPopperButtonDefaultFontWeight  !important;
+    line-height: @datePickerPopperButtonDefaultLineHeight  !important;
+    color: @datePickerPopperButtonDefaultColor  !important;
+    background: @datePickerPopperButtonDefaultBackground  !important;
+    border: @datePickerPopperButtonDefaultBorder  !important;
+    border-radius: @datePickerPopperButtonDefaultBorderRadius  !important;
+    transition: none !important;
+
     &:hover {
-      background: @datePickerPopperButtonDefaultHoverBackground;
-      border-color: @datePickerPopperButtonDefaultHoverBorderColor;
+      background: @datePickerPopperButtonDefaultHoverBackground  !important;
+      border-color: @datePickerPopperButtonDefaultHoverBorderColor  !important;
     }
+
     &:active {
-      background: @datePickerPopperButtonDefaultActiveBackground;
-      border-color: @datePickerPopperButtonDefaultActiveBorderColor;
-      box-shadow: @datePickerPopperButtonDefaultActiveBoxShadow;
+      background: @datePickerPopperButtonDefaultActiveBackground  !important;
+      border-color: @datePickerPopperButtonDefaultActiveBorderColor  !important;
+      box-shadow: @datePickerPopperButtonDefaultActiveBoxShadow  !important;
     }
   }
+
   .el-date-picker__editor-wrap {
     .el-input__inner {
-      height: @datePickerPopperEditorWrapInputInnerHeight;
-      font-size: @datePickerPopperEditorWrapInputInnerFontSize;
-      line-height: @datePickerPopperEditorWrapInputInnerLineHeight;
-      color: @datePickerPopperEditorWrapInputInnerColor;
-      background: @datePickerPopperEditorWrapInputInnerBackground;
-      border: @datePickerPopperEditorWrapInputInnerBorder;
-      border-radius: @datePickerPopperEditorWrapInputInnerBorderRadius;
+      height: @datePickerPopperEditorWrapInputInnerHeight  !important;
+      font-size: @datePickerPopperEditorWrapInputInnerFontSize  !important;
+      line-height: @datePickerPopperEditorWrapInputInnerLineHeight  !important;
+      color: @datePickerPopperEditorWrapInputInnerColor  !important;
+      background: @datePickerPopperEditorWrapInputInnerBackground  !important;
+      border: @datePickerPopperEditorWrapInputInnerBorder  !important;
+      border-radius: @datePickerPopperEditorWrapInputInnerBorderRadius  !important;
+
       &:hover {
-        border: @datePickerPopperEditorWrapInputInnerHoverBorder;
+        border: @datePickerPopperEditorWrapInputInnerHoverBorder  !important;
       }
+
       &:focus {
-        border: @datePickerPopperEditorWrapInputInnerFocusBorder;
-        outline: none;
-        box-shadow: @datePickerPopperEditorWrapInputInnerFocusBoxShadow;
+        border: @datePickerPopperEditorWrapInputInnerFocusBorder  !important;
+        outline: none !important;
+        box-shadow: @datePickerPopperEditorWrapInputInnerFocusBoxShadow  !important;
       }
     }
+
     input::input-placeholder {
-      color: @datePickerPopperEditorWrapInputPlaceholderColor;
+      color: @datePickerPopperEditorWrapInputPlaceholderColor  !important;
     }
   }
 }
