@@ -1,5 +1,6 @@
 const { defineConfig } = require('@vue/cli-service');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -21,10 +22,14 @@ module.exports = defineConfig({
     https: false,
   },
   configureWebpack: {
-    externals: {
-      // 如果是库模式，可能需要将 vue-virtual-scroller 外部化
-      'vue-virtual-scroller': 'vue-virtual-scroller',
-    },
-    plugins: [new NodePolyfillPlugin()],
+    plugins: [
+      new CopyWebpackPlugin(
+        {
+          patterns: [{ from: 'package/assets/css', to: 'css' }],
+        },
+        {},
+      ),
+      new NodePolyfillPlugin(),
+    ],
   },
 });
