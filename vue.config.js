@@ -22,6 +22,13 @@ module.exports = defineConfig({
     https: false,
   },
   configureWebpack: {
+    externals:
+      process.env.NODE_ENV === 'production'
+        ? {
+            // 生产环境（库模式）下外部化
+            'vue-virtual-scroller': 'VueVirtualScroller',
+          }
+        : {},
     plugins: [
       new CopyWebpackPlugin(
         {
