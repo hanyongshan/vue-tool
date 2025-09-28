@@ -5,7 +5,7 @@
 
 ```js
 import HysTool from 'hystool';
-import 'hystool/lib/hystool.css';
+import 'hystool/dist/hystool.css';
 
 Vue.use(HysTool);
 ```
