@@ -11,6 +11,7 @@ files.keys().forEach(file => {
 
 import MsValidate from './utils/validate.js';
 import MsTool from './utils/tool.js';
+import MsJsStore from './utils/jsStore.js';
 
 export { MsValidate, MsTool };
 
